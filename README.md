@@ -7,6 +7,6 @@
 [Abhi Thumar](https://github.com/AbhiThumar).    
 [Izhan Sheth](https://github.com/Izhansheth).        
 [Jay Vakhariya]().   
-
+[Chintan Maru] (https://github.com/chin22maru).      
 
 
