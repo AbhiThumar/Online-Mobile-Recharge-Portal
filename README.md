@@ -1,5 +1,11 @@
 # Online-Mobile-Recharge-Portal
 
+## Table of content
+
+* [Introduction](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#introduction)
+* [Project Updates](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#project-updates)
+* [Contributors](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#contributors)
+  
 ## Introduction
 
 An online mobile recharge portal is a web-based application that allows users to recharge their mobile phones with any major mobile operator.
