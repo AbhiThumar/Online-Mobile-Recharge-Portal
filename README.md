@@ -21,7 +21,7 @@
 
 16/09/23(Meet 8) : Updated ReadMe file & Functionality discussion.  
 
-## Contributors:
+## Contributors
 
 [Charith Kutikuppala](https://github.com/itsmeck24)  
 [Abhi Thumar](https://github.com/AbhiThumar)    
