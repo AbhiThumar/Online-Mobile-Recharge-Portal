@@ -11,10 +11,20 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import environ
+env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+environ.Env.read_env(BASE_DIR / '.env')
+
+SMS_API_KEY=env("SMS_API_KEY")
+
+MAX_OTP_TRY = 3
+
+AUTH_USER_MODEL = "recharge_portal.UserModel"
+MIN_PASSWORD_LENGTH = 8
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -26,6 +36,7 @@ SECRET_KEY = "django-insecure-*z$9v&f7tq^p00a6vsip8@=wngra&(vsg8+3pzn6*vg@)10@#(
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
@@ -38,11 +49,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "recharge_portal",
+    "rest_framewok",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
