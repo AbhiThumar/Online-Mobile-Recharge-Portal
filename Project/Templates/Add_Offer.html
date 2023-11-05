@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Offer</title>
+</head>
+<body>
+{% csrf_token %}
+
+<form action="add_offer" method="post">
+{% csrf_token %}
+
+<p>Select Operator : - </p>
+<select name="Mobile_Operator" required>
+    <option value="">select</option>
+    {% for op_name in list_data %}
+        <option value="{{op_name}}">{{op_name}}</option>
+    {% endfor %}
+</select>
+
+<br> <br> 
+
+<textarea name="Offer_Name" placeholder="Offer Name" id="" cols="30" rows="2" required></textarea>
+<br> <br>
+
+<input type="text" name="Offer Type" placeholder="Offer Type" required>
+<br> <br>
+
+<input type="text" name="Validity" placeholder="Validity" required>
+<br> <br>
+
+<textarea name="Description" placeholder="Description" id="" cols="30" rows="4" required></textarea>
+<br><br>
+
+<input type="Submit" value="Add Offer"> <br> <br>
+
+</form>
+
+</body>
+</html>

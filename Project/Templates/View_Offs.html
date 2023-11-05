@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Offers</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        
+
+    </style>
+</head>
+<body>
+{% csrf_token %}
+<h1 style="color: rgb(128, 0, 255);">Offers</h1>
+
+<table>
+{% csrf_token %} 
+
+    <thead>
+        <tr>
+            <th>Mobile Operator</th>
+            <th>Offer Name</th>
+            <th>Offer Type</th>
+            <th>Validity</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for item in list_data %}
+
+            <tr>
+            <td>{{ item.0 }}</td>
+            <td>{{ item.1 }}</td>
+            <td>{{ item.2 }}</td>
+            <td>{{ item.3 }}</td>
+            <td>{{ item.4 }}</td>
+            </tr>
+            
+        {% endfor %}
+    </tbody>
+
+<table>
+
+</body>
+</html>

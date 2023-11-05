@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge Now</title>
+</head>
+<body>
+{% csrf_token %}
+
+<form action="plans" method="post">
+{% csrf_token %}
+
+<input type="tel" name="mobile" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required> <br>  <br>
+
+
+<p> Select Operator : - </p>
+<select name="Mobile_Operator" required>
+    <option value="">select</option>
+    {% for op_name in list_data %}
+        <option value="{{op_name}}">{{op_name}}</option>
+    {% endfor %}
+</select>
+
+<br> <br> 
+
+<p> Select Plan: - </p>
+<select name="Select_Plans" required>
+    <option value="">select</option>
+    <option name="Pre-Paid"  value="Pre-Paid">Pre-Paid</option>
+    <option name="Post-Paid" value="Post-Paid">Post-Paid</option>
+</select>
+
+<br> <br> <br> 
+
+<input type="Submit" value="View Plans"> 
+</form>
+
+</body>
+</html>

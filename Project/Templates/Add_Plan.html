@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Plan</title>
+</head>
+<body>
+{% csrf_token %}
+<form action="add_plan" method="post">
+{% csrf_token %}
+
+<p>Select Operator : - </p>
+<select name="Mobile_Operator" required>
+    <option value="">select</option>
+    {% for op_name in list_data %}
+        <option value="{{op_name}}">{{op_name}}</option>
+    {% endfor %}
+</select>
+
+<br> <br> 
+
+<p>Select Plans : - </p>
+<select name="Select_Plans" required>
+    <option value="">select</option>
+    <option name="Pre-Paid"  value="Pre-Paid">Pre-Paid</option>
+    <option name="Post-Paid" value="Post-Paid">Post-Paid</option>
+</select>
+
+<br> <br> 
+
+<input type="text" name="Plan_Name" placeholder="Add Plan Name" required>
+<br> <br>
+<input type="text" name="Amount" placeholder="Add Amount Details" required>
+<br> <br>
+<input type="text" name="Validity" placeholder="Add Validity Details" required>
+<br> <br>
+<input type="text" name="SMS" placeholder="Add SMS Details" required>
+<br> <br>
+<input type="text" name="Talktime" placeholder="Add Talktime Details" required>
+<br> <br>
+<input type="text" name="Full_Talktime" placeholder="Add Full Talktime Details" required>
+<br> <br>
+<input type="text" name="Data" placeholder="Add Data Details" required>
+<br> <br>
+<!-- <input type="text" name="Value_Added_Services" placeholder="Value Added Services Details" required> -->
+<textarea name="Value_Added_Services" placeholder="Value Added Services Details" id="" cols="30" rows="3" required></textarea>
+
+<br> <br>
+
+<input type="Submit" value="Add Plan"> <br> <br>
+
+</form>
+
+</body>
+</html>
