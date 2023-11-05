@@ -34,7 +34,7 @@ This project focuses at providing and easy and reliable platform to recharge mob
 
 [Charith Kutikuppala](https://github.com/itsmeck24)  
 [Abhi Thumar](https://github.com/AbhiThumar)    
-[Izhan Sheth](https://github.com/Izhansheth)       
+[Izhan Sheth](https://github.com/Izhan-Sheth)          
 [Chintan Maru](https://github.com/chin22maru)   
 [Nirmal Halpati](https://github.com/38nirmal)    
 [Jay Vakhariya](https://github.com/Vakhariya)     
