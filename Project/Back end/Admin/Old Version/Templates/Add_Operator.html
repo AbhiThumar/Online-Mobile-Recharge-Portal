@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Add Operator</title>
+  <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdd%20Operator%2FHeader_Css_Updated.css?alt=media&token=529c456c-dfa8-4869-a983-a03a02ee7bac">
+   
+
+  <style>
+    input[type="submit"] {
+      font-weight: bold; 
+      background-color:rgb(226, 43, 168); 
+      width: 300px;
+      border: white;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: blue;
+    }
+
+    .container {   
+      padding: 25px;   
+      background-color: lightblue;  
+      margin-left: 400px;
+      margin-right: 400px;
+  }   
+  </style>
+
+</head>
+<body>
+<nav id="nav">
+  <ul>
+      <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FLogo.png?alt=media&token=b7d80c70-6779-4cbd-9010-38b2f87be7ad&_gl=1*1eerqqp*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIxNTkxOS4yOS4xLjE2OTkyMTY2MTUuMzUuMC4w" alt=""></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_operator'  %}'" target="_blank">Add Operators</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_plan'  %}'" target="_blank">Add Plans</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_offer'  %}'" target="_blank">Add Offers</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_operator'  %}'" target="_blank">View Operators</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_user'  %}'" target="_blank">View Users</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_transaction'  %}'" target="_blank">View Transactions</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_feedback'  %}'" target="_blank">View Feedback</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'adminlogin'  %}'" target="_blank">Logout</a></li>
+  </ul>
+</nav>
+<br><br> 
+
+<center> <h1> Add Operators</h1> </center> <br>  
+
+    <form action="add_operator" method="post">
+      <div class="container"> 
+      {% csrf_token %}
+      <input  type="text" name="Mobile_Operator_Name" placeholder="Mobile Operator Name" required><br><br>
+      <input type="text" name="Description" placeholder="Description" required> <br><br>
+      <input type="text" name="image" placeholder="Logo Image Link" required> <br><br>
+      <input type="Submit" value="Add Operator"> <br>
+      <br>
+      </div>
+    </form>
+ 
+<!-- <button onclick="location.href = '{% url 'feedback'  %}'">Feedback</button> -->
+<!-- <button onclick="location.href = '{% url 'contactus'  %}'">Contact Us</button>
+<button onclick="location.href = '{% url 'aboutus'  %}'">About Us</button> -->
+
+
+  
+</body>
+</html>
