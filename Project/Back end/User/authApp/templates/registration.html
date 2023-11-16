@@ -43,6 +43,23 @@
 <span class="text-danger">{{up.phone_number.errors}}</span>
 <label >{{up.phone_number.label}}</label><br>
 {{up.phone_number}} <br><br>
+<input type="date" name="Date_Of_Birth" placeholder="DOB"> 
+<br>  <br>
+
+       <p> Gender : - </p>
+       <input type="radio" name="gender" value="Male" checked> Male
+       <input type="radio" name="gender" value="Female"> Female
+       <br> <br>
+
+
+        <label for="operator">Select Operator : - </label>
+        <select name="Mobile_Operator" required>
+            <option value="">select</option>
+            {% for op_name in list_data %}
+                <option name="Mobile_Operator" value="{{op_name}}">{{op_name}}</option>
+            {% endfor %}
+        </select>
+        <br> <br>
 
 <button class="btn" name="registration">Create Account</button>
        </form>
@@ -51,3 +68,5 @@
    </div>
   </body>
 </html>
+
+

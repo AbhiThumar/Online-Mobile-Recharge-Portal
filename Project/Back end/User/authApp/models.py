@@ -12,3 +12,12 @@ class Profile(models.Model):
     phone_number = models.CharField(max_length=17,validators=[phone_regex],unique=True)
     email_verified = models.BooleanField(default=False)
     uuid = models.UUIDField(default=uuid.uuid4,editable=False)
+    
+class transactions(models.Model):
+    sender=models.CharField(max_length=200,null=True)
+    receiver=models.CharField(max_length=200,null=True)
+    amount=models.IntegerField(null=True)
+    time_transtaction=models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return repr(self.time_transtaction)
