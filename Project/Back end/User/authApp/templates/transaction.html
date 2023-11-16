@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">    <!-- <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css"%}"/> -->
+
+  </head>
+  <body >
+    <div class="container " >
+      <br>
+      <div class="row"  >
+        <br>
+        <div class="jumbotron"style="text-shadow:1px 10px 17px black;text-align:center;width:100%;">
+          <h1>Your transactions history is here</h1>
+        </div>
+        <table class=" table table-striped table-hover" style="width:100%;border:4px double blue;">
+          <thead>
+            <tr>
+              <th>Unique id</th>
+              <th>Sender</th>
+              <th>Receiver</th>
+              <th>Amount</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in mytr %}
+              <tr>
+                <td>{{i.id}}</td>
+                <td>
+                  {% if i.sender is None %}
+                  self
+                  {% else %}
+                  {{i.sender}}
+                  {% endif %}
+                </td>
+                <td>
+                  {% if i.receiver is None %}
+                  self
+                  {% else %}
+                  {{i.receiver}}
+                  {% endif %}
+                </td>
+                <td>{{i.amount}}</td>
+                <td>{{i.time_transtaction}}</td>
+
+              </tr>
+            {% endfor%}
+          </tbody>
+          <tbody>
+
+          </tbody>
+        </table>
+
+
+        </div>
+      </div>
+
+  </body>
+</html>
