@@ -1,0 +1,117 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+#logo {
+    width: 150px;
+    height: 100px;
+    margin-left: 100px;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: rgb(25, 25, 190);
+    top: 0x;
+    height: 80px;
+
+}
+
+#nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.item {
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.item a {
+    padding: 10px;
+    margin: 15px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    text-align: center;
+    color: white;
+    text-align: center;
+}
+
+#edit {
+    margin-left: 950px;
+    list-style: none;
+}
+
+#edit a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+#img {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.item a:hover {
+    color: rgb(130, 130, 192);
+}
+
+#edit a:hover {
+    color: rgb(130, 130, 192);
+}
+.heading{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    
+}
+.container{
+    text-align: center;
+    background-color: #e7e5e5;
+}
+.upi{
+    width: 40px;
+    height: 20px;
+}
+.list{
+    background-color: white;
+    color: rgb(25, 25, 190);
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+    width: 600px;
+    margin-left: 670px;
+    border-radius: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-style: solid;
+    border-color: white white black white ;
+    box-shadow: 5px 5px 5px 5px grey;
+    
+}
