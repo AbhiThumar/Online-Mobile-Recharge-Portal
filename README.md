@@ -49,14 +49,14 @@ This project focuses at providing and easy and reliable platform to recharge mob
 ## Contributors
 
 [Charith Kutikuppala](https://github.com/itsmeck24)   
-[Jay Vakhariya](https://github.com/Vakhariya)  
-[Abhi Thumar](https://github.com/AbhiThumar)    
-[Izhan Sheth](https://github.com/Izhan-Sheth)          
-[Chintan Maru](https://github.com/chin22maru)   
+[Jay Vakhariya](https://github.com/Vakhariya)   
+[Abhi Thumar](https://github.com/AbhiThumar)     
+[Izhan Sheth](https://github.com/Izhan-Sheth)  
+[Pratik Kumar](https://github.com/Pratik1114)  
 [Nirmal Halpati](https://github.com/38nirmal)    
 [Priyanshi Patel](https://github.com/Priyanshi-1301)    
 [Adhya Desai](https://github.com/adhyadesai)    
-[Rathol Rohan](https://github.com/202101098)    
-[Pratik Kumar](https://github.com/Pratik1114)    
+[Rathol Rohan](https://github.com/202101098)     
+[Chintan Maru](https://github.com/chin22maru) 
 
 
