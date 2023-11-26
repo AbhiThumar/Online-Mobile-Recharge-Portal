@@ -42,9 +42,11 @@ This project focuses at providing and easy and reliable platform to recharge mob
 
 ## Technologies used:
 
-**Frontend:** HTML CSS Bootstrap  
+**Frontend:** HTML,CSS, Bootstrap  
 **Backend:** Python Django  
 **Database:** Firebase  
+**Version Control:** Git, GitHub
+**UI/UX Design:** Figma
 
 ## Contributors
 
