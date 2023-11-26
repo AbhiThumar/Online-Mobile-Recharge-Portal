@@ -4,6 +4,8 @@
 
 * [Introduction](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#introduction)
 * [Project Updates](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#project-updates)
+* [Running the website on the local device](https://gitub.com/AbhiThumar/Online-Mobile-Recharge-Portal#Running-the-website-on-the-local-device)
+* [Technologies Used](https://gitub.com/AbhiThumar/Online-Mobile-Recharge-Portal#Technologies-used)
 * [Contributors](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#contributors)
   
 ## Introduction
@@ -39,7 +41,13 @@ This project focuses at providing and easy and reliable platform to recharge mob
 * Run the website using cmd: ```python manage.py runserver ```
 
 * Open the website using any web browser and type the URL: ``` localhost:8000 ```
-* 
+
+## Technologies used:
+
+**Frontend:** HTML CSS Bootstrap
+**Backend:** Python Django
+**Database:** Firebase
+
 ## Contributors
 
 [Charith Kutikuppala](https://github.com/itsmeck24)   
