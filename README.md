@@ -30,28 +30,27 @@ This project focuses at providing and easy and reliable platform to recharge mob
 
 16/09/23(Meet 8) : Updated ReadMe file & Functionality discussion.  
 
-### Running the website on the local device
+## Running the website on the local device
 
-First clone this repsitory using cmd: <code>git clone https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal.git<code>
+* First clone this repsitory using cmd: ``` git clone https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal.git ```
 
-Install all the dependencies using cmd: <code>pip install -r requirements.txt<code>
+* Install all the dependencies using cmd: ``` pip install -r requirements.txt ``` 
 
-Run the website using cmd: <code>python manage.py runserver<code>
+* Run the website using cmd: ```python manage.py runserver ```
 
-Open the website using any web browser and type the URL: <code>localhost:8000<code>
-
+* Open the website using any web browser and type the URL: ``` localhost:8000 ```
+* 
 ## Contributors
 
-[Charith Kutikuppala](https://github.com/itsmeck24)  
+[Charith Kutikuppala](https://github.com/itsmeck24) 
+[Jay Vakhariya](https://github.com/Vakhariya)  
 [Abhi Thumar](https://github.com/AbhiThumar)    
 [Izhan Sheth](https://github.com/Izhan-Sheth)          
 [Chintan Maru](https://github.com/chin22maru)   
 [Nirmal Halpati](https://github.com/38nirmal)    
-[Jay Vakhariya](https://github.com/Vakhariya)     
 [Priyanshi Patel](https://github.com/Priyanshi-1301)    
 [Adhya Desai](https://github.com/adhyadesai)    
 [Rathol Rohan](https://github.com/202101098)    
 [Pratik Kumar](https://github.com/Pratik1114)    
-   
 
 
