@@ -3,6 +3,7 @@
 ## Table of content
 
 * [Introduction](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#introduction)
+* [Website Link](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#Website-link)
 * [Project Updates](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#project-updates)
 * [Running the website on the local device](https://gitub.com/AbhiThumar/Online-Mobile-Recharge-Portal#Running-the-website-on-the-local-device)
 * [Technologies Used](https://gitub.com/AbhiThumar/Online-Mobile-Recharge-Portal#Technologies-used)
@@ -16,14 +17,15 @@ This project focuses at providing and easy and reliable platform to recharge mob
 
 ## Website Link
   **Website link** -  
-  **Demo video link** - 
+  **Demo video link** -
+  
 ## Project Updates
 
-**03/08/23(Meet 1) :** Discussion and Shortlisting of the project ideas. 
-**04/08/23(Meet 2) :** Brainstorming of the selected project idea.  
-**06/08/23(Meet 3) :** Divided group into subgroups and assigned tasks.  
-**08/08/23(Meet 4) :** Created a Repository and started design and thinking about the project.  
-**22/08/23(Meet 5) :** Created UserStories.  
+**03/08/23(Meet 1) :** Discussion and Shortlisting of the project ideas.  
+**04/08/23(Meet 2) :** Brainstorming of the selected project idea.   
+**06/08/23(Meet 3) :** Divided group into subgroups and assigned tasks.   
+**08/08/23(Meet 4) :** Created a Repository and started design and thinking about the project.   
+**22/08/23(Meet 5) :** Created UserStories.   
 **28/08/23(Meet 6) :** Created Concept Map.  
 **12/09/23(Meet 7) :** Created an Activity Diagram.  
 **16/09/23(Meet 8) :** Updated ReadMe file & Functionality discussion.  
