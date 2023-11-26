@@ -5,8 +5,8 @@
 * [Introduction](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#introduction)
 * [Website Link](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#Website-link)
 * [Project Updates](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#project-updates)
-* [Running the website on the local device](https://gitub.com/AbhiThumar/Online-Mobile-Recharge-Portal#Running-the-website-on-the-local-device)
-* [Technologies Used](https://gitub.com/AbhiThumar/Online-Mobile-Recharge-Portal#Technologies-used)
+* [Running the website on the local device](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#Running-the-website-on-the-local-device)
+* [Technologies Used](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#Technologies-used)
 * [Contributors](https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal#contributors)
   
 ## Introduction
