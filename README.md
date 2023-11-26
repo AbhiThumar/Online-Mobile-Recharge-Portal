@@ -28,7 +28,7 @@ This project focuses at providing and easy and reliable platform to recharge mob
 **22/08/23(Meet 5) :** Created UserStories.   
 **28/08/23(Meet 6) :** Created Concept Map.  
 **12/09/23(Meet 7) :** Created an Activity Diagram.  
-**16/09/23(Meet 8) :** Updated ReadMe file & Functionality discussion.  
+**16/09/23(Meet 8) :** Updated README file & Functionality discussion.  
 
 ## Running the website on the local device
 
