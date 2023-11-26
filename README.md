@@ -42,7 +42,7 @@ This project focuses at providing and easy and reliable platform to recharge mob
 * 
 ## Contributors
 
-[Charith Kutikuppala](https://github.com/itsmeck24) 
+[Charith Kutikuppala](https://github.com/itsmeck24)   
 [Jay Vakhariya](https://github.com/Vakhariya)  
 [Abhi Thumar](https://github.com/AbhiThumar)    
 [Izhan Sheth](https://github.com/Izhan-Sheth)          
