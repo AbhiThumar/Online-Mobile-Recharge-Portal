@@ -1,0 +1,230 @@
+@import url("http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+#logo{
+    width: 150px;
+    height: 100px;
+    margin-left: 100px;
+}
+
+body{
+    overflow: hidden;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: rgb(25, 25, 190);
+    top: 0x;
+    height: 80px;
+    
+}
+
+#nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.item{
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15px;
+}
+.item a{
+    padding: 10px;
+    margin: 15px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin:25px;
+    text-align: center;
+    color: white;
+    text-align: center;
+}
+#edit{
+    margin-left: 950px;
+    list-style: none;
+}
+
+#edit a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+#img{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+.hero{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 100vh;
+    background: url('img2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hand{
+    margin-right: 550px;
+    margin-top: 28px;
+}
+
+.form-box{
+    margin-right: 100px;
+    width: 420px;
+    height: 600px;
+    background: #fff;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 20px 9px #24deff1f;
+    border-radius: 30px;
+}
+
+.toogle-btn{
+    font-size: 15.5px;
+    font-weight: 500;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #33d88b;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.form-box .h1{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.input-field::placeholder{
+    color: #fff;
+}
+
+.input-group{
+    color: #fff;
+    margin-left: -15px;
+    position: absolute;
+    width: 350px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 50px 30px 0px;
+    background: #33d88b;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin: 30px 10px 0px;
+}
+
+#nav a {
+    color: #fff;
+   
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+#nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #33d88b;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.signup{
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 230px;
+}
+
+.signup a{
+    color: #fff;
+}
