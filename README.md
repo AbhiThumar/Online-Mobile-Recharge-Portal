@@ -30,6 +30,16 @@ This project focuses at providing and easy and reliable platform to recharge mob
 
 16/09/23(Meet 8) : Updated ReadMe file & Functionality discussion.  
 
+### Running the website on the local device
+
+First clone this repsitory using cmd: <code>git clone https://github.com/AbhiThumar/Online-Mobile-Recharge-Portal.git<code>
+
+Install all the dependencies using cmd: <code>pip install -r requirements.txt<code>
+
+Run the website using cmd: <code>python manage.py runserver<code>
+
+Open the website using any web browser and type the URL: <code>localhost:8000<code>
+
 ## Contributors
 
 [Charith Kutikuppala](https://github.com/itsmeck24)  
