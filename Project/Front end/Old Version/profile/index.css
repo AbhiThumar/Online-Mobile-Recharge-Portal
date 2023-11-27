@@ -1,0 +1,99 @@
+.header-child {
+  position: absolute;
+  top: 4.98px;
+  left: 0;
+  background-color: #0400b1;
+  width: 1924px;
+  height: 85.6px;
+}
+.logout,
+.recharge {
+  text-decoration: none;
+  position: absolute;
+  width: 144px;
+}
+.recharge {
+  top: 33.84px;
+  left: 404px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  height: 28.87px;
+}
+.logout {
+  top: 33px;
+  left: 1758px;
+}
+
+input,textarea{
+  font-size: 25px;
+}
+
+.about-us,
+.logout,
+.signuplogin {
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  height: 28.87px;
+}
+.signuplogin {
+  text-decoration: none;
+  position: absolute;
+  top: 32.98px;
+  left: 1562.11px;
+  width: 130.27px;
+}
+.about-us {
+  top: 33.84px;
+  left: 628px;
+  width: 140px;
+}
+.about-us,
+.contact-us,
+.inverted-user-1 {
+  text-decoration: none;
+  position: absolute;
+}
+.contact-us {
+  top: 33.84px;
+  left: 848px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  width: 168px;
+  height: 28.87px;
+}
+.inverted-user-1 {
+  top: 29px;
+  left: 1508px;
+  width: 41.09px;
+  height: 37.82px;
+  background-image: url(./public/inverteduser1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.header,
+.image-1 {
+  position: absolute;
+  height: 96.55px;
+}
+.image-1 {
+  text-decoration: none;
+  top: 0;
+  left: 45px;
+  width: 190.4px;
+  background-image: url(./public/image1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.header {
+  top: -8px;
+  left: 0;
+  width: 1924px;
+  color: var(--color-white);
+}
+
+
