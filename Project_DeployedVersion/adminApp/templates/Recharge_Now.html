@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Recharge Now</title>
+  <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+  <style>
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Replace 'your-image-url. jpg' with the actual URL or path to your image */
+  }
+
+  form {
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px;
+    border: 2px solid white;
+    width: 400px;
+    height: 500px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(31, 30, 30, 0.801);
+    box-shadow: 10px 10px 50px 10px black;
+  }
+
+  label {
+    display: block;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  input,
+  select,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 50px;
+    box-shadow: 2px 2px 20px 1px black;
+  }
+
+  input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 15px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: black;
+  }
+
+  .image-container {
+    text-align:center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+
+  #payment-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  .payment-form {
+    display: none;
+  }
+
+  #debitCardForm:target,
+  #creditCardForm:target {
+    display: block;
+  }
+  #mobileNumber{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  h1 {
+    color: cyan;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+  }
+    </style>
+</head>
+
+<body>
+
+  <nav id="nav">
+    <ul>
+        <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>
+        <li class="item"><a href="#About"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Recharge</a></li>
+        <li class="item"><a href="#Contact"  onclick="location.href = '{% url 'offers'  %}'" target="_blank">Offers</a></li>
+        <li class="item"><a href="#Recharge"  onclick="location.href = '{% url 'user_transaction'  %}'" target="_blank">Transaction History</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'feedback'  %}'" target="_blank">FeedBack</a></li> 
+        <li class="item"><a href="#Transaction_History"  onclick="location.href = '{% url 'userprofile'  %}'" target="_blank">Profile</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'reg'  %}'" target="_blank">Logout</a></li>  
+    </ul>
+</nav>
+<br><br>
+
+<center>
+  <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;"> Recharge Now </h1>
+</center> 
+<br>
+
+    <form action="show_plans" method="post">
+      <!-- <div class="container">  -->
+      {% csrf_token %}
+
+      <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required>
+<br><br>
+    <center>
+      <h3>Select Operator :
+        <select name="Mobile_Operator" required>
+            <option value="">select</option>
+            {% for op_name in list_data %}
+                <option value="{{op_name}}">{{op_name}}</option>
+            {% endfor %}
+        </select>
+      </h3>
+    </center>
+    <br><br>
+        
+      <center><h3> Select Plans : &nbsp; 
+        <select name="Select_Plans" required>
+            <option value="">select</option>
+            <option name="Pre-Paid"  value="Pre-Paid">Pre-Paid</option>
+            <option name="Post-Paid" value="Post-Paid">Post-Paid</option>
+        </select>
+        </h3>
+      </center>
+      <br>
+        
+        <input type="Submit" value="Submit"> <br>
+      <br>
+    </form>
+  
+</body>
+</html>

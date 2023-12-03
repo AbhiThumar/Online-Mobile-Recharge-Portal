@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FHeader_Css.css?alt=media&token=55400b9a-fa5d-4f1d-970e-26be25c354c5&_gl=1*17rmur5*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIyMTc4Mi4zMC4xLjE2OTkyMjM1MjUuMjYuMC4w">
+    <style>
+      body {
+          background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+      }
+  </style>
+    <!-- <style>
+      
+      h1 {
+        margin-top: 40px;
+        font-size: xx-large;
+        text-align: center;
+      }
+
+      body{
+        background-color: aliceblue;
+      }
+    </style> -->
+
+
+    <style>
+      body {
+        font-family: sans-serif;
+       
+      }
+      h1 {
+        color: cyan;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+      }
+  
+      form {
+        margin: 0 auto;
+        width: 500px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+  
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+  
+      input, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+  
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: black;
+      }
+  
+      .image-container {
+        text-align: center;
+      }
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+  
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+  
+      #payment-options {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+      }
+  
+      .payment-form {
+        display: none;
+      }
+  
+      #debitCardForm:target, #creditCardForm:target {
+        display: block;
+      }
+    </style> 
+
+</head>
+
+<body>
+
+{% csrf_token %}  
+<nav id="nav">
+  <ul>
+      <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FLogo.png?alt=media&token=b7d80c70-6779-4cbd-9010-38b2f87be7ad&_gl=1*1eerqqp*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIxNTkxOS4yOS4xLjE2OTkyMTY2MTUuMzUuMC4w" alt=""></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_operator'  %}'" target="_blank">Add Operators</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_plan'  %}'" target="_blank">Add Plans</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_offer'  %}'" target="_blank">Add Offers</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_operator'  %}'" target="_blank">View Operators</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_user'  %}'" target="_blank">View Users</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_transaction'  %}'" target="_blank">View Transactions</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_feedback'  %}'" target="_blank">View Feedback</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'adminlogin'  %}'" target="_blank">Logout</a></li>
+  </ul>
+</nav>
+<br><br> 
+
+<center><h1> Keep the power of communication in your hands. </h1></center>
+
+<!-- <button onclick="location.href = '{% url 'feedback'  %}'">Feedback</button>
+<button onclick="location.href = '{% url 'contactus'  %}'">Contact Us</button>
+<button onclick="location.href = '{% url 'aboutus'  %}'">About Us</button> -->
+
+</body>
+</html> 

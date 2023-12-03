@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers </title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+    <style>
+        body {
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+        }
+    
+        form {
+          margin: 0 auto;
+          width: 500px;
+          padding: 20px;
+          border: 2px solid white;
+          width: 400px;
+          height: 450px;
+          color: white;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-color: rgba(31, 30, 30, 0.801);
+          box-shadow: 10px 10px 50px 10px black;
+          margin-top: 10px;
+        }
+    
+        label {
+          display: block;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+    
+        input,
+        select,
+        textarea,
+        select {
+          width: 350px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+    
+        input[type="submit"] {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          border-radius: 5px;
+          cursor: pointer;
+          width: 150px;
+        }
+    
+        input[type="submit"]:hover {
+          background-color: black;
+        }
+    
+        input[type="radio"] {
+          margin-right: 10px;
+        }
+    
+        input,
+        textarea {
+          box-shadow: 2px 2px 20px 4px black;
+        }
+    
+        h1 {
+          color: cyan;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          margin-bottom: 10px;
+        }
+      </style> 
+</head>
+<body>
+    {% csrf_token %} 
+    <nav id="nav">
+      <ul>
+          <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>
+          <li class="item"><a href="#About"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Recharge</a></li>
+          <li class="item"><a href="#Contact"  onclick="location.href = '{% url 'offers'  %}'" target="_blank">Offers</a></li>
+          <li class="item"><a href="#Recharge"  onclick="location.href = '{% url 'user_transaction'  %}'" target="_blank">Transaction History</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'feedback'  %}'" target="_blank">FeedBack</a></li> 
+          <li class="item"><a href="#Transaction_History"  onclick="location.href = '{% url 'userprofile'  %}'" target="_blank">Profile</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'reg'  %}'" target="_blank">Logout</a></li>  
+      </ul>
+  </nav>
+  <br><br>
+
+    <center>
+        <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top: 100px;"> View Offers</h1>
+      </center>
+       <br>
+      
+        <form action="view_offers" method="post">
+           
+            {% csrf_token %}
+            <h3>Select Operator : 
+                <select name="Mobile_Operator" required>
+                    <option value="">select</option>
+                    {% for op_name in list_data %}
+                        <option value="{{op_name}}">{{op_name}}</option>
+                    {% endfor %}
+                </select>
+            </h3>
+
+        <br><br>
+
+        <input type="Submit" value="View Offers">
+        </form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+    <style>
+        body {
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+        }
+    </style>
+</head>
+<body>
+{% csrf_token %}
+
+<div class="main">
+    <nav id="nav">
+        <ul>
+            <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+            <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+            <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>
+            <li class="item"><a href="#About"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Recharge</a></li>
+            <li class="item"><a href="#Contact"  onclick="location.href = '{% url 'offers'  %}'" target="_blank">Offers</a></li>
+            <li class="item"><a href="#Recharge"  onclick="location.href = '{% url 'user_transaction'  %}'" target="_blank">Transaction History</a></li>
+            <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'feedback'  %}'" target="_blank">FeedBack</a></li> 
+            <li class="item"><a href="#Transaction_History"  onclick="location.href = '{% url 'userprofile'  %}'" target="_blank">Profile</a></li>
+            <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'reg'  %}'" target="_blank">Logout</a></li>  
+        </ul>
+    </nav>
+    <br><br>
+    
+
+<div class="content">
+    <div class="pp">
+        <img class="img" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fpp.jpg?alt=media&token=1db8989d-70ba-4c74-a098-0c0bef0de341" alt="">
+
+        {% for item in list_data %}
+            <h1>{{item.0}}</h1>
+            <br>
+            <h3>{{item.3}}</h3>
+        {% endfor %}    
+    </div>
+    <center>
+    <div class="info">
+        <h1 id="in">Information</h1>
+        <hr>
+        <div class="written">
+        {% for item in list_data %}
+            <h2>Phone : {{item.1}}</h2>
+            <br>
+            <h2>Operator:{{item.2}}</h2>
+            <br>
+            <h2>Age : {{item.6}}</h2><br>
+            <h2>Gender : {{item.5}} </h2>
+            <br>
+        {% endfor %}
+        </div>
+    </div>
+    </center>
+
+</div>
+</div>
+    
+</body>
+</html>
