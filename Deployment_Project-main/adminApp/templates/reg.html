@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sign Up </title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+  
+    <style>
+        .container {
+          padding: 25px;
+          background-color: lightblue;
+          margin-left: 400px;
+          margin-right: 400px;
+        }
+    
+        body {
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+     
+        }
+    
+        form {
+          margin: 0 auto;
+          width: 500px;
+          padding: 20px;
+          border: 2px solid white;
+          width: 450px;
+          height: 790px;
+          color: white;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-color: rgba(31, 30, 30, 0.89);
+          box-shadow: 10px 10px 50px 10px black;
+        }
+    
+        label {
+          display: block;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+    
+        input,
+        select,
+        textarea,
+        select {
+          width: 350px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          margin: 15px;
+        }
+    
+        input[type="submit"] {
+          background-color: #007bff;
+          color: white;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          width: 150px;
+          margin-top: 15px;
+        }
+    
+        input[type="submit"]:hover {
+          background-color: black;
+        }
+    
+        input[type="radio"] {
+          margin-right: 10px;
+        }
+        h1 {
+          color: cyan;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          margin-bottom: 10px;
+        }
+        h3,option,input{
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: larger;
+        }
+        option,input,textarea,select{
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: larger;
+          box-shadow: 2px 2px 20px 1px black;
+        }
+        
+        h1 {
+          color: white;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          margin-bottom: 10px;
+        }
+        </style>
+
+        <script>
+
+          function validateForm() {
+            const fullname = document.getElementById('fullname').value;
+            const fullname_errorMsg = document.getElementById('fullname_errorMsg');
+
+          
+            if (fullname.length >= 30) {
+              fullname_errorMsg.textContent = 'Name must be less than 30 characters.';
+              return false; // Prevent form submission
+            }
+            
+             else {
+              fullname_errorMsg.textContent = '';
+              return true; // Allow form submission
+            }
+          }
+
+
+          function validateDOB() {
+            const dob = new Date(document.getElementById('dob').value);
+            const today = new Date();
+        
+            if (dob > today) {
+              document.getElementById('dobError').textContent = 'You cannot enter a future date for DOB.';
+              return false; // Prevent form submission
+            } else {
+              document.getElementById('dobError').textContent = '';
+              return true; // Allow form submission
+            }
+          }
+
+          function validateMobileNumber() {
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            const mobileError = document.getElementById('mobileError');
+        
+            if (!(/^[0-9]{10}$/.test(mobileNumber))) {
+              mobileError.textContent = 'Please enter a valid 10-digit mobile number.';
+              return false; // Prevent form submission
+            } else {
+              mobileError.textContent = '';
+              return true; // Allow form submission
+            }
+          }
+        
+          </script>
+</head>
+<body>
+{% csrf_token %}
+<nav id="nav">
+  <ul>
+      <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+      <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+      <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>  
+  </ul>
+</nav>
+<br><br>
+
+<center><h1>Sign Up</h1></center>
+
+<center>
+<form id="myForm" onsubmit="return validateForm()" action="reg" method="post">
+{% csrf_token %}
+
+<!-- <label for="">FullName : - </label> -->
+<input type="text" name="fullname" id="fullname" placeholder="FullName" required >
+<br> <br>
+<span id="fullname_errorMsg" style="color: red;"></span>
+
+<label for="">DOB : - </label>
+<input type="date" id="dob" name="Date_Of_Birth" placeholder="DOB" required  > 
+<br> <br>
+<div id="dobError" class="error-message"></div>
+
+
+<h3>Gender :  
+    <select name="gender" required> 
+        <option value="">select</option>
+        <option name="male"  value="male">Male</option>
+        <option name="female" value="female">Female</option>
+        <option name="other" value="other">Other</option>
+</select>
+</h3>
+<br>
+
+
+<input type="tel" id="mobileNumber" name="phone_number" placeholder="Enter Mobile Number" pattern="[0-9]{10}" title="Please Enter the 10 digits Mobile Number" required>
+<br><br>
+
+<span id="mobileError" style="color: red;"></span>
+
+
+<input type="email" name="email" id="" placeholder="Enter Your Email"  required >
+
+       <h3>Select Operator :
+        <select name="Mobile_Operator" required>
+            <option value="">select</option>
+            {% for op_name in list_data %}
+                <option value="{{op_name}}">{{op_name}}</option>
+            {% endfor %}
+        </select>
+      </h3>
+      <br><br>
+
+<input type="submit" value="submit"><br><br>
+<label for="">Already Register? : </label>
+<a href="#"  onclick="location.href = '{% url 'reg'  %}'" >Sign In</a>
+
+<br><br><br><br>
+{% if message %}
+        <h1>{{ message }}</h1>
+{% endif %}
+
+</form>
+<br><br>    
+
+</center>
+
+</body>
+</html>

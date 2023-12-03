@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdd%20Offer%2FAdd%20Offer.css?alt=media&token=7264c6b1-68cf-44a2-be96-4c293bb9a801"> -->
+
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2Fstyle.css?alt=media&token=09643c06-6838-4896-9be7-1f329c8532d1">
+	<title>About Us</title>
+</head>
+
+<body>
+{% csrf_token %}
+
+<!-- <nav id="nav">
+    <ul>
+        <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FLogo.png?alt=media&token=b7d80c70-6779-4cbd-9010-38b2f87be7ad&_gl=1*1eerqqp*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIxNTkxOS4yOS4xLjE2OTkyMTY2MTUuMzUuMC4w" alt=""></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_operator'  %}'" target="_blank">Add Operators</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_plan'  %}'" target="_blank">Add Plans</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_offer'  %}'" target="_blank">Add Offers</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_operator'  %}'" target="_blank">View Operators</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_user'  %}'" target="_blank">View Users</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_transaction'  %}'" target="_blank">View Transactions</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_feedback'  %}'" target="_blank">View Feedback</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'adminlogin'  %}'" target="_blank">Logout</a></li>
+    </ul>
+  </nav>
+<br><br> -->
+
+
+
+	<section class="about">
+		<h1>About Us</h1>
+		<p style="font-weight: bold">About Our Online Mobile Recharge Services...</p>
+		<div class="about-info">
+			<div class="about-img">
+				<img src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2Fimg1.png?alt=media&token=3bf3dfc0-6f3d-4729-be91-302261b7d317" alt="img">
+			</div>
+			<div>
+	<p>We Fiber, at Smart Recharge aim to make your mobile recharge experience seamless and convenient. With our user-friendly online platform, you can recharge your mobile phone from anywhere, anytime. Whether you need to top up your prepaid balance, pay your postpaid bill, or recharge your DTH and data card, we've got you covered.</p>
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="team">
+		<h1>Meet Our Team</h1>
+
+		
+		<div class="team-cards" onclick=openLinkChairath()>
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101128.jpeg?alt=media&token=625eed00-bf9e-4b6f-aaa2-808a0d1c8bbc" alt="User 1">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Charith Kutikuppala</h2>
+					<p class="card-email">202101128@daiict.ac.in</p>
+				</div>
+			</div>
+			<script>
+				function openLinkChairath() {
+					window.open("https://www.youtube.com/watch?v=IUSyV2BVh4A", "_blank");
+				}
+			</script>
+
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101123.jpeg?alt=media&token=3d1cacb1-c226-4d5f-888e-30cad682863c" alt="User 2">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Abhi Thumur</h2>
+					<p class="card-email">202101123@daiict.ac.in</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101124.jpeg?alt=media&token=aa453738-36da-4f59-a36c-506d9d502630" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Izhan Sheth</h2>
+					<p class="card-email">202101124@daiict.ac.in</p>
+				</div>
+			</div>
+
+	
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101143.jpeg?alt=media&token=2c31f5f5-27b1-47b0-bfef-04e9e97aceeb" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Chintan Maru</h2>
+					<p class="card-email">202101143@daiict.ac.in</p>
+				</div>
+			</div>
+
+
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101156.jpeg?alt=media&token=7438774c-a3f6-4173-afaf-fa8fec6bc9d2" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Nirmal Halpati</h2>
+					<p class="card-email">202101156@daiict.ac.in</p>
+
+				</div>
+			</div>
+
+			<div class="card" onclick="openLinkJay()">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101149.jpeg?alt=media&token=40a113d7-228d-4587-a4e8-4c6e8f350780" alt="User 3">
+				</div>
+				<div class="card-info" a href="https://classroom.google.com/h">
+					<h2 class="card-name">Jay Vakhariya</h2>
+					<p class="card-email">202101149@daiict.ac.in</p>
+				</div>
+			</div>
+			<script>
+				function openLinkJay() {
+					window.open("https://in.linkedin.com/in/vakhariya-jay-77610a241", "_blank");
+				}
+			</script>
+
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101126.jpeg?alt=media&token=0185af29-ee07-4d88-8a68-b4eb836efd3d" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Priyanshi Patel</h2>
+					<p class="card-email">202101126@daiict.ac.in</p>
+				</div>
+			</div>
+
+
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101111.jpeg?alt=media&token=2e792fc9-ecbd-4bac-a700-1a50096db715" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Adhya Desia</h2>
+					<p class="card-email">202101111@daiict.ac.in</p>
+				</div>
+			</div>
+
+			
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101098.jpeg?alt=media&token=d305bfd5-bd88-4e2c-b204-a981ae24058b" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Rathol Rohan</h2>
+					
+					<p class="card-email">202101098@daiict.ac.in</p>
+				</div>
+			</div>
+
+
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FAbout%20Us%2F202101148.jpeg?alt=media&token=61bbcefd-2a5f-4481-8c4b-c600c6c8eecf" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Pratik Kumar</h2>
+					<p class="card-email">202101148@daiict.ac.in</p>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+</body>
+
+</html>
