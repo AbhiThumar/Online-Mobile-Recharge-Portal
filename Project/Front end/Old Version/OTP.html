@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification</title>
+
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+
+  <script>
+    // Function for verifying OTP
+    function verifyOTP() {
+      const code = document.getElementById('verificationcode').value;
+      window.confirmationResult.confirm(code).then(function() {
+        console.log('OTP verified successfully');
+      }).catch(function(error) {
+        console.error('OTP verification failed:', error.message);
+        alert('OTP verification failed: ' + error.message);
+      });
+    }
+
+    // Initialize Firebase app
+    const firebaseConfig = {
+        "apiKey": "AIzaSyBOSZKBZQYdcHmaCs5nlOhrD9GGVuiVRFU",
+        "authDomain": "mobile-recharge-a2f5b.firebaseapp.com",
+        "projectId": "mobile-recharge-a2f5b",
+        "storageBucket": "mobile-recharge-a2f5b.appspot.com",
+        "messagingSenderId": "220946121042",
+        "appId": "1:220946121042:web:402e08cd8a20f377ecba8b",
+        "measurementId": "G-6JZEK2YC24",
+        "serviceAccount" : "E:/Django/Try1/try/try/serviceAccount.json",
+        "databaseURL" : "https://mobile-recharge-a2f5b-default-rtdb.firebaseio.com/",
+    };
+
+    firebase.initializeApp(firebaseConfig).then(function() {
+      console.log('Firebase app initialized successfully');
+      // Firebase app initialized successfully, proceed with Firebase Authentication operations
+      render();
+    }).catch(function(error) {
+      console.error('Firebase app initialization failed:', error.message);
+      alert('Firebase app initialization failed: ' + error.message);
+    });
+
+    // Render reCAPTCHA verifier
+    function render() {
+      window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+      recaptchaVerifier.render();
+    }
+
+    // Function for sending OTP
+    function phoneAuth() {
+      const number = document.getElementById('number').value;
+      firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function(confirmationResult) {
+        window.confirmationResult = confirmationResult;
+        console.log('OTP sent');
+      }).catch(function(error) {
+        console.error('Error sending OTP:', error.message);
+        alert('Error sending OTP: ' + error.message);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div id="recaptcha-container"></div>
+
+  <input type="text" id="number" placeholder="+923..." required>
+  <input type="button" id="send" value="Send OTP" onclick="phoneAuth()">
+
+  <label for="">OTP: </label>
+  <input type="number" name="otp" id="verificationcode" placeholder="Enter Your OTP" pattern="[0-9]{6}" required>
+  <input type="button" id="verify" value="Verify OTP" onclick="verifyOTP()">
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
