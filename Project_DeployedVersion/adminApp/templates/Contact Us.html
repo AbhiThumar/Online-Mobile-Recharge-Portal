@@ -1,0 +1,134 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sales Contact Form</title>
+    <!-- <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdd%20Offer%2FAdd%20Offer.css?alt=media&token=7264c6b1-68cf-44a2-be96-4c293bb9a801"> -->
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FContact%20Us%2Fstyle.css?alt=media&token=21b08ee9-d117-49b8-a252-7bc6e7b9b0c0">
+
+    <style>
+      body {
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+      }
+    </style>
+
+    <script>
+
+      function validateForm() {
+        const fullname = document.getElementById('fullname').value;
+        const fullname_errorMsg = document.getElementById('fullname_errorMsg');
+
+        const subject = document.getElementById('subject').value;
+        const subject_errorMsg = document.getElementById('subject_errorMsg');
+
+        const message = document.getElementById('message').value;
+        const message_errorMsg = document.getElementById('message_errorMsg');
+
+      
+        if (fullname.length >= 30) {
+          fullname_errorMsg.textContent = 'Name must be less than 30 characters.';
+          return false; // Prevent form submission
+        }
+
+        if (subject.length >= 20) {
+          subject_errorMsg.textContent = 'Subject must be less than 20 characters.';
+          return false; // Prevent form submission
+        }
+
+        if (message.length >= 50) {
+          message_errorMsg.textContent = 'Message must be less than 50 characters.';
+          return false; // Prevent form submission
+        }
+
+        else {
+          fullname_errorMsg.textContent = '';
+          subject_errorMsg.textContent = '';
+          message_errorMsg.textContent = '';
+          return true; // Allow form submission
+        }
+
+      }
+
+      </script>
+  
+  </head>
+
+<body>
+
+    <!-- <nav id="nav">
+      <ul>
+          <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>
+          <li class="item"><a href="#About"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Recharge</a></li>
+          <li class="item"><a href="#Contact"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Offers</a></li>
+          <li class="item"><a href="#Recharge"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Transaction History</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'feedback'  %}'" target="_blank">FeedBack</a></li> 
+          <li class="item"><a href="#Transaction_History"  onclick="location.href = '{% url 'userprofile'  %}'" target="_blank">Profile</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'reg'  %}'" target="_blank">Logout</a></li>  
+      </ul>
+  </nav>
+  <br><br> -->
+
+    <div class="container-fluid form-container">
+      <div class="container">
+        <div class="form-card">
+          <div class="row covero">
+            <div class="col-md-5 addresscol">
+              <div class="address-cover">
+                  <h2>Contact Us</h2>
+                  <p>If you have any questions or concerns, please feel free to get in touch with us. Our
+                    customer support team is available 24/7 to assist you.</p>
+
+                  <address>
+                    Daiict college, Reliance Cross Rd,<br>
+                    Gandhinagar, Gujarat 382007
+                  </address>
+                  <ul>
+                    <li><i class="fa fa-mobile-alt"></i> <a href="tel:+914884738470" style="color: white;">+91 4884738470</a></li>
+                    <li><i class="fa fa-envelope"></i> <a href="mailto:support@rechargeportal.com" style="color: white;">support@rechargeportal.com</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-7 formcol">
+
+          <form id="myForm" onsubmit="return validateForm()" action="contactus_submit" method="post">
+            {% csrf_token %}
+                <div class="form-cover">
+                    <div class="form-row row">
+                        <input type="text" name = "name" placeholder="Enter Full Name" id="fullname" required="" class="form-control">
+                        <span id="fullname_errorMsg" style="color: red;"></span>
+                    </div>
+                    <div class="form-row row">
+                      <input type="tel" id="mobileNumber" name="phone_number" placeholder="Enter Mobile Number" pattern="[0-9]{10}" title="Please Enter the 10 digits Mobile Number" required>
+                   </div>
+                    <div class="form-row row">
+                        <input type="email" name = "email" placeholder="Enter Email Address" required="" class="form-control">
+                    </div>
+                    <div class="form-row row">
+                        <input type="text" name="subject" id="subject" placeholder="Enter Subject" required="" class="form-control">
+                        <span id="subject_errorMsg" style="color: red;"></span>
+                    </div>
+                    <div class="form-row row">
+                        <textarea placeholder="Enter Your Message" name="message" id="message" required="" rows="4" class="form-control"></textarea> 
+                        <span id="message_errorMsg" style="color: red;"></span>
+                    </div>
+                    <div class="form-row row mb-0">
+                        <input type="Submit" class="btn btn-primary" value="Submit">
+                    </div>
+                </div>
+            </form>
+
+            </div>  
+          </div>
+        </div>
+        
+      </div>
+    </div> 
+
+  </body>
+  </html>

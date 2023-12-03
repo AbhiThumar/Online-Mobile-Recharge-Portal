@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Offer</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdd%20Offer%2FAdd%20Offer.css?alt=media&token=7264c6b1-68cf-44a2-be96-4c293bb9a801">
+    <style>
+      .container {
+        padding: 25px;
+        background-color: lightblue;
+        margin-left: 400px;
+        margin-right: 400px;
+      }
+  
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+    
+      }
+  
+      form {
+        margin: 0 auto;
+        width: 500px;
+        padding: 20px;
+        border: 2px solid white;
+        width: 450px;
+        height: 700px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgba(31, 30, 30, 0.89);
+        box-shadow: 10px 10px 50px 10px black;
+      }
+  
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+  
+      input,
+      select,
+      textarea,
+      select {
+        width: 350px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+  
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        width: 150px;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: black;
+      }
+  
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+      h1 {
+        color: cyan;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+      }
+      h3,option,input{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: larger;
+      }
+      option,input,textarea,select{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: larger;
+        box-shadow: 2px 2px 20px 1px black;
+      }
+      </style>
+
+      <script>
+
+        function validateForm() {
+          const Offer_Name = document.getElementById('Offer_Name').value;
+          const Offer_Name_errorMsg = document.getElementById('Offer_Name_errorMsg');
+
+          const Offer_Type = document.getElementById('Offer_Type').value;
+          const Offer_Type_errorMsg = document.getElementById('Offer_Type_errorMsg');
+        
+          if (Offer_Name.length >= 30) {
+            Offer_Name_errorMsg.textContent = 'Offer Name must be less than 30 characters.';
+            return false; // Prevent form submission
+          }
+          
+          if (Offer_Type.length >= 20) {
+            Offer_Type_errorMsg.textContent = 'Offer Type Details must be less than 20 characters.';
+            return false; // Prevent form submission
+          }
+
+           else {
+            Offer_Name_errorMsg.textContent = '';
+            Offer_Type_errorMsg.textContent = '';
+            return true; // Allow form submission
+          }
+        }
+        </script>
+
+</head>
+<body>
+{% csrf_token %}
+<nav id="nav">
+    <ul>
+        <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FLogo.png?alt=media&token=b7d80c70-6779-4cbd-9010-38b2f87be7ad&_gl=1*1eerqqp*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIxNTkxOS4yOS4xLjE2OTkyMTY2MTUuMzUuMC4w" alt=""></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_operator'  %}'" target="_blank">Add Operators</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_plan'  %}'" target="_blank">Add Plans</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_offer'  %}'" target="_blank">Add Offers</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_operator'  %}'" target="_blank">View Operators</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_user'  %}'" target="_blank">View Users</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_transaction'  %}'" target="_blank">View Transactions</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_feedback'  %}'" target="_blank">View Feedback</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'adminlogin'  %}'" target="_blank">Logout</a></li>
+    </ul>
+  </nav>
+<br><br> 
+
+<center><h1 style="font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Add Offers</h1></center>
+
+<center>
+<form id="myForm" onsubmit="return validateForm()" action="add_offer" method="post">
+<!-- <div class="container"> -->
+{% csrf_token %}
+
+
+<h3>Select Operator :
+<select name="Mobile_Operator" required>
+    <option value="">select</option>
+    {% for op_name in list_data %}
+        <option value="{{op_name}}">{{op_name}}</option>
+    {% endfor %}
+</select>
+</h3>
+
+
+<br> <br> 
+
+<textarea name="Offer_Name" placeholder="Offer Name" id="Offer_Name" cols="30" rows="2" required></textarea>
+<br> <br>
+<span id="Offer_Name_errorMsg" style="color: red;"></span>
+
+<input type="text" name="Offer Type" id="Offer_Type" placeholder="Offer Type"  required>
+<br> <br>
+<span id="Offer_Type_errorMsg" style="color: red;"></span>
+
+<input type="text" name="Validity" placeholder="Validity"  required>
+<br> <br>
+
+<textarea name="Description" placeholder="Description"  cols="30" rows="4" required></textarea>
+<br><br>
+
+<input type="Submit" value="Add Offer"> <br> <br>
+
+</form>
+</center>
+
+</body>
+</html>

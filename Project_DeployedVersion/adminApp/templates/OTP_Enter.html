@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+</head>
+<body>
+{% csrf_token %}
+{% csrf_token %} 
+<nav id="nav">
+  <ul>
+      <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+      <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+      <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>
+      <li class="item"><a href="#About"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Recharge</a></li>
+      <li class="item"><a href="#Contact"  onclick="location.href = '{% url 'offers'  %}'" target="_blank">Offers</a></li>
+      <li class="item"><a href="#Recharge"  onclick="location.href = '{% url 'user_transaction'  %}'" target="_blank">Transaction History</a></li>
+      <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'feedback'  %}'" target="_blank">FeedBack</a></li> 
+      <li class="item"><a href="#Transaction_History"  onclick="location.href = '{% url 'userprofile'  %}'" target="_blank">Profile</a></li>
+      <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'reg'  %}'" target="_blank">Logout</a></li>  
+  </ul>
+</nav>
+<br><br>
+
+
+<div id="success-message" style="display: none;" class="success-message">
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+</div>
+
+<form action="dashboard" method="post">
+{% csrf_token %}
+  
+<!-- Display the timer -->
+<div id="timer">Time remaining: <span id="timer-countdown">60</span> seconds</div>
+
+<!-- Your OTP input field -->
+<label for="">Enter OTP: - </label>
+<input type="text" name="otp" pattern="\d{6}" title="Please enter exactly 6 digits" maxlength="6" required>
+<br><br>
+
+<!-- Button to resend OTP -->
+<button id="resend-otp" onclick="location.href = '{% url 'resend_otp'  %}'"    >Resend OTP</button>
+
+
+
+<!-- Include JavaScript for countdown and resend functionality -->
+<script>
+
+   
+  // Function to update the countdown timer
+  function updateTimer() {
+    var timerCountdown = document.getElementById('timer-countdown');
+    var timeRemaining = parseInt(timerCountdown.innerText);
+    
+    if (timeRemaining > 0) {
+      timeRemaining--;
+      timerCountdown.innerText = timeRemaining;
+      setTimeout(updateTimer, 1000);
+    }
+  }
+
+  // Function to handle OTP resend
+  function resendOTP() {
+    // Implement the logic to resend OTP (you can make an AJAX call to the server)
+    alert('OTP resent!');
+    
+    // Reset the timer
+    document.getElementById('timer-countdown').innerText = 60;
+    updateTimer();
+  }
+
+  // Start the countdown timer
+  updateTimer();
+
+  // Attach click event to the Resend OTP button
+  document.getElementById('resend-otp').addEventListener('click', resendOTP);
+
+
+   // Show success message and hide it after 20 seconds
+   setTimeout(function() {
+    var successMessage = document.getElementById('success-message');
+    successMessage.style.display = 'block';
+
+    setTimeout(function() {
+      successMessage.style.display = 'none';
+    }, 3000);  // 20 seconds
+  }, 50);  // 2 seconds (adjust as needed)
+
+
+</script>
+
+<input type="submit" value="submit"><br>
+
+</form>
+
+</body>
+</html>
+

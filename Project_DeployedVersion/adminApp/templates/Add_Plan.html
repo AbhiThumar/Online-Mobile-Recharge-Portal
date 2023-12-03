@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Plan</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdd%20Plans%2FAdd%20Plan.css?alt=media&token=f5298cf8-d3f7-498e-94f2-c77777613ec4">
+    <style>
+      .container {
+        padding: 25px;
+        background-color: lightblue;
+        margin-left: 400px;
+        margin-right: 400px;
+      }
+  
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+   
+      }
+  
+      form {
+        margin: 0 auto;
+        width: 500px;
+        padding: 20px;
+        border: 2px solid white;
+        width: 450px;
+        height: 790px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgba(31, 30, 30, 0.89);
+        box-shadow: 10px 10px 50px 10px black;
+      }
+  
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+  
+      input,
+      select,
+      textarea,
+      select {
+        width: 350px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin: 15px;
+      }
+  
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        width: 150px;
+        margin-top: 15px;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: black;
+      }
+  
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+      h1 {
+        color: cyan;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+      }
+      h3,option,input{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: larger;
+      }
+      option,input,textarea,select{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: larger;
+        box-shadow: 2px 2px 20px 1px black;
+      }
+      </style> 
+
+      <script>
+
+        function validateForm() {
+          const Plan_Name = document.getElementById('Plan_Name').value;
+          const Plan_Name_errorMsg = document.getElementById('Plan_Name_errorMsg');
+
+          const Amount = document.getElementById('Amount').value;
+          const Amount_errorMsg = document.getElementById('Amount_errorMsg');
+        
+          if (Plan_Name.length >= 25) {
+            Plan_Name_errorMsg.textContent = 'Plan Name must be less than 25 characters.';
+            return false; // Prevent form submission
+          }
+          
+          if (Amount.length >= 6) {
+            Amount_errorMsg.textContent = 'Amount Details must be less than 6 numbers.';
+            return false; // Prevent form submission
+          }
+
+           else {
+            Plan_Name_errorMsg.textContent = '';
+            Amount_errorMsg.textContent = '';
+            return true; // Allow form submission
+          }
+        }
+        </script>
+
+</head>
+<body>
+{% csrf_token %}
+<nav id="nav">
+    <ul>
+        <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FLogo.png?alt=media&token=b7d80c70-6779-4cbd-9010-38b2f87be7ad&_gl=1*1eerqqp*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIxNTkxOS4yOS4xLjE2OTkyMTY2MTUuMzUuMC4w" alt=""></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_operator'  %}'" target="_blank">Add Operators</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_plan'  %}'" target="_blank">Add Plans</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'add_offer'  %}'" target="_blank">Add Offers</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_operator'  %}'" target="_blank">View Operators</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_user'  %}'" target="_blank">View Users</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_transaction'  %}'" target="_blank">View Transactions</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'view_feedback'  %}'" target="_blank">View Feedback</a></li>
+        <li class="item"><a href="#" onclick="location.href = '{% url 'adminlogin'  %}'" target="_blank">Logout</a></li>
+    </ul>
+  </nav>
+  <br><br>
+
+  <center>
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; margin-bottom: 10px;"> Add Plans</h1>
+  </center>
+
+<center> 
+<form id="myForm" onsubmit="return validateForm()" action="add_plan" method="post"  >
+
+{% csrf_token %}
+<h3>Select Operator : 
+<select name="Mobile_Operator" required>
+    <option value="">select</option>
+    {% for op_name in list_data %}
+        <option value="{{op_name}}">{{op_name}}</option>
+    {% endfor %}
+</select>
+</h3>
+
+
+
+<h3>Select Plans : 
+<select name="Select_Plans" required>
+    <option value="">select</option>
+    <option name="Pre-Paid"  value="Pre-Paid">Pre-Paid</option>
+    <option name="Post-Paid" value="Post-Paid">Post-Paid</option>
+</select>
+</h3>
+
+<input type="text" name="Plan_Name" id="Plan_Name" placeholder="Add Plan Name"   required>
+<span id="Plan_Name_errorMsg" style="color: red;"></span>
+
+<input type="number" name="Amount" id="Amount" placeholder="Add Amount Details" required>
+<span id="Amount_errorMsg" style="color: red;"></span>
+
+<input type="text" name="Validity" placeholder="Add Validity Details"  required>
+
+<input type="text" name="SMS" placeholder="Add SMS Details"  required>
+
+
+
+<h3>Talktime  : 
+<select name="Talktime" required>
+    <option value="">select</option>
+    <option name="Limited"  value="Limited">Limited</option>
+    <option name="UnLimited" value="UnLimited">UnLimited</option>
+</select>
+</h3>
+
+<input type="text" name="Data" id="dataInput" placeholder="Add Data Details" maxlength="30" title="Data Details must be within 30 characters." required>
+
+<span id="dataError" style="color: red;"></span>
+
+<textarea name="Value_Added_Services" placeholder="Value Added Services Details" maxlength="100" cols="30" rows="3" title="Value Added Services Details must be within 100 characters." required></textarea>
+
+<input type="Submit" value="Add Plan">
+</form>
+</center>
+
+</body>
+</html>

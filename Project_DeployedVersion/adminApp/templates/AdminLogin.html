@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FAdmin.css?alt=media&token=007b417d-47a9-424b-a346-c984be8a0899">
+    <style>
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+      }
+  
+      form {
+        margin: 0 auto;
+        width: 500px;
+        padding: 20px;
+        border: 2px solid white;
+        width: 400px;
+        height: 450px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgba(31, 30, 30, 0.801);
+        box-shadow: 10px 10px 50px 10px black;
+        margin-top: 10px;
+      }
+  
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+  
+      input,
+      select,
+      textarea,
+      select {
+        width: 350px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+  
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 150px;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: black;
+      }
+  
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+  
+      input,
+      textarea {
+        box-shadow: 2px 2px 20px 4px black;
+      }
+  
+      h1 {
+        color: cyan;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+      }
+    </style> 
+</head>
+<body>
+{% csrf_token %}
+<center><h1>Admin Login</h1></center><br>
+
+<form action="Index" method="post" onsubmit="return validateForm()" >
+    {% csrf_token %}
+    <input type="text" name="username" id="username" placeholder="Username" maxlength="15" required>
+
+    <span id="usernameError" style="color: red;"></span><br>
+
+    <input type="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(.{8,12})$" title="Password must be 8-12 characters with at least one lowercase, one uppercase, and one special character" required><br>
+    <input type="Submit" value="Login">
+    
+<br><br><br>
+    {% if messages %}
+  <div>
+    {% for msg in messages %}
+    <center> <h3> {{msg}} </h3></center>
+    {% endfor %}
+  </div>
+{% endif %}
+</form>
+
+<script>
+  function validateForm() {
+      var usernameInput = document.getElementById('username');
+      var usernameError = document.getElementById('usernameError');
+
+      if (usernameInput.value.length > 15) {
+          usernameError.textContent = 'Username must be within 15 characters.';
+          return false;  // Prevent form submission
+      } else {
+          usernameError.textContent = '';  // Clear any previous error message
+          return true;  // Allow form submission
+      }
+  }
+</script>
+
+
+
+
+</body>
+</html>
