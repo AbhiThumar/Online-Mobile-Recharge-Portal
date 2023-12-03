@@ -16,7 +16,7 @@ An online mobile recharge portal is a web-based application that allows users to
 This project focuses at providing and easy and reliable platform to recharge mobile of any telecommunication company via online without the need of buying recharge cards. Users can typically choose from a variety of recharge plans and discounts, and they can pay for their recharge using a variety of payment methods, such as credit cards, debit cards, and net banking.
 
 ## Website Link
-  **Website link** -  https://online-mobile-recharge-portal.onrender.com/
+  **Website link** -  https://online-mobile-recharge-portal.onrender.com/  
   **Demo video link** - 
   
 ## Project Updates
