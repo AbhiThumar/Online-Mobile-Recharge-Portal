@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Add Operator</title>
+  <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdd%20Operator%2FHeader_Css_Updated.css?alt=media&token=529c456c-dfa8-4869-a983-a03a02ee7bac">
+
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+    }
+
+    form {
+      margin: 0 auto;
+      width: 500px;
+      padding: 20px;
+      border: 2px solid white;
+      width: 400px;
+      height: 450px;
+      color: white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: rgba(31, 30, 30, 0.801);
+      box-shadow: 10px 10px 50px 10px black;
+      margin-top: 10px;
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    input,
+    select,
+    textarea,
+    select {
+      width: 350px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 150px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: black;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    input,
+    textarea {
+      box-shadow: 2px 2px 20px 4px black;
+    }
+
+    h1 {
+      color: cyan;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: 10px;
+    }
+    
+</style> 
+
+  <script>
+    function validateForm() {
+      const mobileOperatorName = document.getElementById('Mobile_Operator_Name').value;
+      const errorMsg = document.getElementById('errorMsg');
+    
+      if (mobileOperatorName.length >= 15) {
+        errorMsg.textContent = 'Mobile Operator Name must be less than 15 characters.';
+        return false; // Prevent form submission
+      } else {
+        errorMsg.textContent = '';
+        return true; // Allow form submission
+      }
+    }
+    </script>
+
+  
+
+</head>
+<body>
+<nav id="nav">
+  <ul>
+      <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FLogo.png?alt=media&token=b7d80c70-6779-4cbd-9010-38b2f87be7ad&_gl=1*1eerqqp*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIxNTkxOS4yOS4xLjE2OTkyMTY2MTUuMzUuMC4w" alt=""></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_operator'  %}'" target="_blank">Add Operators</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_plan'  %}'" target="_blank">Add Plans</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'add_offer'  %}'" target="_blank">Add Offers</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_operator'  %}'" target="_blank">View Operators</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_user'  %}'" target="_blank">View Users</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_transaction'  %}'" target="_blank">View Transactions</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'view_feedback'  %}'" target="_blank">View Feedback</a></li>
+      <li class="item"><a href="#" onclick="location.href = '{% url 'adminlogin'  %}'" target="_blank">Logout</a></li>
+  </ul>
+</nav>
+<br><br> 
+
+<center>
+  <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top: 100px;"> Add Operators</h1>
+</center>
+ <br>
+
+    <form id="myForm" onsubmit="return validateForm()" action="add_operator" method="post">
+     
+      {% csrf_token %}
+      <input  type="text" name="Mobile_Operator_Name" placeholder="Mobile Operator Name" id="Mobile_Operator_Name"  required><br><br>
+      <span id="errorMsg" style="color: red;"></span>
+      <input type="text" name="Description" placeholder="Description" required> <br><br>
+      <input type="text" name="image" placeholder="Logo Image Link" required> <br><br>
+      <input type="Submit" value="Add Operator"> <br>
+      <br>
+    </form>
+
+
+    
+ 
+
+</body>
+</html>

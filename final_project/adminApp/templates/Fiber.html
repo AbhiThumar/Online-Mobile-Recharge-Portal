@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiber</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Fiber%2FOpening.css?alt=media&token=ceab7115-888f-4d32-b7a2-7b0adf4f5082">
+    <style>
+        body {
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+        }
+
+        @media only screen and (max-width: 480px) {
+            .wrapper {
+                width: 500px;
+                height: 300px;
+            }
+
+            .btns a {
+                margin: 20px;
+                height:150px;
+                width: 200px;
+                border-radius: 25px;
+            }
+
+            .logoimg:hover{
+                transform: scale(1.1);
+                
+            }
+            .edit{
+                border-radius: 20px;
+                width: 100px;
+                margin: 5px;
+            }
+            .name{
+                color: black;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <div class="container">
+            <div class="logo-container">
+                <img class="logoimg" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Fiber%2FLogo.png?alt=media&token=c8841397-2a7d-470e-a4c8-9774f4fd5b49" alt="Logo with Image">
+            </div>
+
+            <div class="wrapper">
+                <div class="text">
+                    <h1>Choose Your Role</h1>
+                </div>
+                <p>Select whether you want to login as an admin or a user.</p>
+
+                <div class="btns">
+                    <a href="#" class="admin-button">
+                        <img class="edit" onclick="location.href = '{% url 'adminlogin'  %}'" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Fiber%2Fadmin1.png?alt=media&token=7c315ef1-69da-46b3-b51e-d6886f6de9b6" alt="Admin Icon">
+                        <br>
+                        <h3 class="name">Admin</h3>
+                    </a>
+                    <a href="#" class="user-button">
+                        <img class="edit" onclick="location.href = '{% url 'reg'  %}'" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Fiber%2Fusa1.png?alt=media&token=ee3b5521-9b3a-47fa-acb6-2c9cf35d889b" alt="User Icon">
+                        <br>
+                        <h3 class="name">User</h3>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
