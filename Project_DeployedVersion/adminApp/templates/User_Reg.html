@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+
+</head>
+<body>
+{% csrf_token %}
+
+<form action="reg" method="post">
+{% csrf_token %}
+  
+<label for="">FullName : - </label>
+<input type="text" name="fullname"  required >
+<br> <br>
+
+<label for="">DOB : - </label>
+<input type="date" id="dob" name="Date_Of_Birth" placeholder="DOB" required  > 
+<br> <br>
+
+<!-- <h3>Gender :  
+    <select name="gender" required> 
+        <option value="">select</option>
+        <option name="male"  value="male">Male</option>
+        <option name="female" value="female">Female</option>
+        <option name="other" value="other">Other</option>
+</select>
+</h3>
+<br><br> -->
+
+<label for="">Mobile Number : - </label>
+<input type="tel" id="mobileNumber" name="phone_number" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required>
+<br><br>
+
+
+<label for="">Email : - </label>
+<input type="email" name="email" id=""  required >
+
+       <h3>Select Operator :
+        <select name="Mobile_Operator" required>
+            <option value="">select</option>
+            {% for op_name in list_data %}
+                <option value="{{op_name}}">{{op_name}}</option>
+            {% endfor %}
+        </select>
+      </h3>
+      <br><br>
+
+<input type="submit" value="submit"><br>
+</form>
+
+<!-- <p>Already registered? <a href="{% url 'login' %}">Login here</a></p> -->
+
+
+</body>
+</html>

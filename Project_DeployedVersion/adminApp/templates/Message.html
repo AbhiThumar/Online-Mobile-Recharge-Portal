@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>
+		Recharge
+	</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+	</script>
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+	</script>
+
+
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+    
+    <style>
+      
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+        }
+        button{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: aliceblue;
+            width: 80px;
+            height: 28px;
+            font-weight: bold;
+        }
+
+        #divID {
+            display: none;
+          }
+          
+      
+        
+        h1 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }   
+    </style>
+</head>
+
+<body>
+{% csrf_token %}
+
+<nav id="nav">
+    <ul>
+        <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>
+        <li class="item"><a href="#About"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Recharge</a></li>
+        <li class="item"><a href="#Contact"  onclick="location.href = '{% url 'offers'  %}'" target="_blank">Offers</a></li>
+        <li class="item"><a href="#Recharge"  onclick="location.href = '{% url 'user_transaction'  %}'" target="_blank">Transaction History</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'feedback'  %}'" target="_blank">FeedBack</a></li> 
+        <li class="item"><a href="#Transaction_History"  onclick="location.href = '{% url 'userprofile'  %}'" target="_blank">Profile</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'reg'  %}'" target="_blank">Logout</a></li>  
+    </ul>
+</nav>
+<br><br>
+
+
+    <center><h1>Recharge Successfully.</h1></center><br><br>
+
+
+	<div class="container">
+    <center>
+    <label>You can download the payment receipt from here: </label>
+    <a href="#" onclick="convertHTMLtoPDF()">Receipt</a>
+
+    
+    </center>    
+		<div id="divID">
+                {% for item in list_data %}
+                    <h1>Transaction Id:  {{item.0}}</h1>
+                    <h1>User Id:  {{item.1}}</h1>
+                    <h1>Date & Time: {{item.2}}</h1>
+                    <h1>User Mail ID: {{item.3}}</h1>
+                    <h1>Mobile Operator: {{item.4}}</h1>
+                    <h1>Select Plans: {{item.5}}</h1>
+                    <h1>Plan Name: {{item.6}}</h1>
+                    <h1>Data: {{item.7}}</h1>
+                    <h1>Amount: {{item.8}}</h1>
+                    <h1>SMS: {{item.9}}</h1>
+                    <h1>Validity: {{item.10}}</h1>
+                    <h1>Value Added Services: {{item.11}}</h1>
+                {% endfor %}
+		</div>
+	</div> 
+
+	<script type="text/javascript">
+		function convertHTMLtoPDF() {
+            const { jsPDF } = window.jspdf;
+          
+            let doc = new jsPDF('l', 'mm', [1500, 1400]);
+            let pdfjs = document.querySelector('#divID');
+          
+            // Temporarily show the divID div element
+            pdfjs.style.display = 'block';
+          
+            doc.html(pdfjs, {
+              callback: function(doc) {
+                doc.save("Payment Receipt.pdf");
+          
+                // Hide the divID div element again
+                pdfjs.style.display = 'none';
+              },
+              x: 12,
+              y: 12
+            });
+          }           
+	</script>
+    <br><br>
+
+    <center>
+    <button onclick="location.href = '{% url 'recharge'  %}'">Back</button>
+    </center>
+
+</body>
+</html>
+

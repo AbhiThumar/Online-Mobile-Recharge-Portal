@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FHeader_Css.css?alt=media&token=55400b9a-fa5d-4f1d-970e-26be25c354c5&_gl=1*17rmur5*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIyMTc4Mi4zMC4xLjE2OTkyMjM1MjUuMjYuMC4w">
+    
+    <style>
+      .center-heading {
+        text-align: center;
+      }
+  
+      table {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+  
+      td,
+      th {
+        border: 2px solid black;
+        text-align: left;
+        padding: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+  
+      tr:nth-child(even) {
+        background-color: rgb(31, 30, 30);
+        box-shadow: 8px 8px 40px 10px black;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+  
+      tr:nth-child(odd) {
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgb(31, 30, 30);
+        box-shadow: 8px 8px 40px 10px black;
+      }
+  
+      body {
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+      }
+      .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+     </style>
+
+</head>
+<body>
+    {% csrf_token %}
+    <nav id="nav">
+      <ul>
+          <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FLogo.png?alt=media&token=b7d80c70-6779-4cbd-9010-38b2f87be7ad&_gl=1*1eerqqp*_ga*OTkxMjk3ODExLjE2OTg4NDcyNjc.*_ga_CW55HF8NVT*MTY5OTIxNTkxOS4yOS4xLjE2OTkyMTY2MTUuMzUuMC4w" alt=""></li>
+          <li class="item"><a href="#" onclick="location.href = '{% url 'add_operator'  %}'" target="_blank">Add Operators</a></li>
+          <li class="item"><a href="#" onclick="location.href = '{% url 'add_plan'  %}'" target="_blank">Add Plans</a></li>
+          <li class="item"><a href="#" onclick="location.href = '{% url 'add_offer'  %}'" target="_blank">Add Offers</a></li>
+          <li class="item"><a href="#" onclick="location.href = '{% url 'view_operator'  %}'" target="_blank">View Operators</a></li>
+          <li class="item"><a href="#" onclick="location.href = '{% url 'view_user'  %}'" target="_blank">View Users</a></li>
+          <li class="item"><a href="#" onclick="location.href = '{% url 'view_transaction'  %}'" target="_blank">View Transactions</a></li>
+          <li class="item"><a href="#" onclick="location.href = '{% url 'view_feedback'  %}'" target="_blank">View Feedback</a></li>
+          <li class="item"><a href="#" onclick="location.href = '{% url 'adminlogin'  %}'" target="_blank">Logout</a></li>
+      </ul>
+    </nav>
+    <br><br> 
+
+<table>
+{% csrf_token %} 
+      <thead>
+          <tr>
+              <th>UserName</th>
+              <th>Email ID</th>
+              <th>Feedback</th>
+              <th>Date && time </th>
+          </tr>
+      </thead>
+      
+      <tbody>
+              {% for item in list_data %}
+      
+                  <tr>
+                  <td>{{ item.0 }}</td>
+                  <td>{{ item.1 }}</td>
+                  <td>{{ item.2 }}</td>
+                  <td>{{ item.3 }}</td>
+                  </tr>
+                  
+              {% endfor %}
+          </tbody>
+      
+</table>
+
+</body>
+</html>

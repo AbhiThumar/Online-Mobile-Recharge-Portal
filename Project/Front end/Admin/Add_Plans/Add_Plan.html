@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Plan</title>
+    <link rel="stylesheet" href="./Header_Css.css">
+    <style>
+        .center-heading {   
+          text-align: center;
+        }
+    body {
+      background-image: url('./Background Img.jpg');
+    }
+    </style>
+</head>
+<body>
+
+    <nav id="nav">
+        <ul>
+            <li><img id="logo" src="./Logo.png" alt=""></li>
+            <li class="item"><a href="#"  target="_blank">Add Operators</a></li>
+            <li class="item"><a href="#"  target="_blank">Add Plans</a></li>
+            <li class="item"><a href="#"  target="_blank">Add Offers</a></li>
+            <li class="item"><a href="#"  target="_blank">View Operators</a></li>
+            <li class="item"><a href="#"  target="_blank">View Users</a></li>
+            <li class="item"><a href="#"  target="_blank">View Transactions</a></li>
+            <li class="item"><a href="#"  target="_blank">View Feedback</a></li>
+            <li class="item"><a href="#"  target="_blank">Logout</a></li>
+        </ul>
+      </nav>
+      <br><br> 
+
+<form>
+
+
+<p>Select Operator : </p>
+<select name="Mobile_Operator" required>
+    <option value="">select</option>
+    {% for op_name in list_data %}
+        <option value="{{op_name}}">{{op_name}}</option>
+    {% endfor %}
+</select>
+
+<br> <br> 
+
+<p>Select Plans : </p>
+<select name="Select_Plans" required>
+    <option value="">select</option>
+    <option name="Pre-Paid"  value="Pre-Paid">Pre-Paid</option>
+    <option name="Post-Paid" value="Post-Paid">Post-Paid</option>
+</select>
+
+<br> <br> 
+
+<input type="text" name="Plan_Name" placeholder="Add Plan Name" required>
+<br> <br>
+<input type="text" name="Amount" placeholder="Add Amount Details" required>
+<br> <br>
+<input type="text" name="Validity" placeholder="Add Validity Details" required>
+<br> <br>
+<input type="text" name="SMS" placeholder="Add SMS Details" required>
+<br> <br>
+
+<p>Talktime  : </p>
+<select name="Talktime" required>
+    <option value="">select</option>
+    <option name="Limited"  value="Limited">Limited</option>
+    <option name="UnLimited" value="UnLimited">UnLimited</option>
+</select>
+
+<br> <br>
+
+<input type="text" name="Data" placeholder="Add Data Details" required>
+<br> <br>
+<textarea name="Value_Added_Services" placeholder="Value Added Services Details" id="" cols="30" rows="3" required></textarea>
+
+<br> <br>
+
+<input type="Submit" value="Add Plan"> <br> <br>
+
+</form>
+
+</body>
+</html>

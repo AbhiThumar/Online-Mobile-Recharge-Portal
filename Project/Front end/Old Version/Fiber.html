@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiber</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Fiber%2FOpening.css?alt=media&token=ceab7115-888f-4d32-b7a2-7b0adf4f5082">
+    <style>
+        body {
+            min-height: 100vh;
+            background: url('back2.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+        color: blanchedalmond;
+        text-shadow: 5px 5px 2px black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+        }
+        .text{
+            color: blanchedalmond;
+            text-shadow: 5px 5px 2px black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 10px;  
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <div class="container">
+            <div class="logo-container">
+                <img class="logoimg" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Fiber%2FLogo.png?alt=media&token=c8841397-2a7d-470e-a4c8-9774f4fd5b49" alt="Logo with Image">
+            </div>
+
+            <div class="wrapper">
+                <div class="text">
+                    <h1>Choose Your Role</h1>
+                </div>
+                <p class="text">Select whether you want to login as an admin or a user.</p>
+
+                <div class="btns">
+                    <a href="#" class="admin-button">
+                        <img class="edit" onclick="location.href = '{% url 'adminlogin'  %}'" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Fiber%2Fadmin1.png?alt=media&token=7c315ef1-69da-46b3-b51e-d6886f6de9b6" alt="Admin Icon">
+                        <br>
+                        <h3 class="name">Admin</h3>
+                    </a>
+                    <a href="#" class="user-button">
+                        <img class="edit" onclick="location.href = '{% url 'reg'  %}'" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Fiber%2Fusa1.png?alt=media&token=ee3b5521-9b3a-47fa-acb6-2c9cf35d889b" alt="User Icon">
+                        <br>
+                        <h3 class="name">User</h3>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

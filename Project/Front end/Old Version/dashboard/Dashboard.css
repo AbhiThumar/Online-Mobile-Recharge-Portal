@@ -1,0 +1,176 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#logo {
+    width: 150px;
+    height: 100px;
+    margin-left: 100px;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: rgb(25, 25, 190);
+    top: 0x;
+    height: 80px;
+
+}
+
+#nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.item {
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.item a {
+    padding: 10px;
+    margin: 15px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    text-align: center;
+    color: white;
+    text-align: center;
+}
+
+#edit {
+    margin-left: 950px;
+    list-style: none;
+}
+
+#edit a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+#img {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.item a:hover {
+    color: rgb(130, 130, 192);
+}
+
+#edit a:hover {
+    color: rgb(130, 130, 192);
+}
+
+.main {
+    background: #eeeeee;
+    height: 877px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bt{
+    height: 50px;
+    width: 150px;
+    margin-top: 80px;
+    border-radius: 25px;
+    font-size: larger;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    background-color:#0e0aeb;
+    color: white;
+    margin: 15px;
+}
+.bt:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.bt:focus{
+    background-color: rgb(32, 32, 219);
+}
+.plan{
+    margin-left: 130px;
+}
+.btn{
+    height: 50px;
+    width: 150px;
+    margin-top: 50px;
+    border-radius: 25px;
+    border: none;
+    font-size: larger;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:#0e0aeb;
+    color: white;
+    margin: 15px;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#planoption{
+    margin-left: 130px;
+}
+
+.options ul {
+    display: flex;
+    align-items: center;
+}
+.options{
+    margin-left: 110px;
+    margin-top: 30px;
+    width: 1100px;
+}
+.options ul li{
+    list-style: none;
+    border: 2px solid #fff;
+    height: 120px;
+    width: 350px;
+    margin: 25px;
+    background-color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.but{
+    margin-top: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 4px;
+    width: 200px;
+    height:30px;
+    color: white;
+    border-radius: 15px;
+    background-color: #0e0aeb;
+    border: 1px solid #fff;
+}
+.but:hover{
+    cursor: pointer;
+}
