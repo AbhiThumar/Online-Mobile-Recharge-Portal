@@ -24,11 +24,11 @@ This project focuses at providing and easy and reliable platform to recharge mob
 **08/08/23(Meet 1) :** Discussion and Shortlisting of the project ideas.  
 **15/08/23(Meet 2) :** Brainstorming of the selected project idea.   
 **22/08/23(Meet 3) :** Divided group into subgroups and assigned tasks.   
-**25/08/23(Meet 5) :** Created UserStories. Discussion on the Tools and Technologies   
-**06/09/23(Meet 6) :** Review and update all the analysis diagrams and update regarding the progress.
-**18/09/23(Meet 6) :** Plan remaining work and assign documentation tasks.
-**23/09/23(Meet 7) :** The backend dynamically adapts to finalized routes based on frontend requirements. 
-**28/09/23(Meet 8) :** Updated README file & Setting up routes and APIs.
+**25/08/23(Meet 5) :** Created UserStories. Discussion on the Tools and Technologies    
+**06/09/23(Meet 6) :** Review and update all the analysis diagrams and update regarding the progress.  
+**18/09/23(Meet 6) :** Plan remaining work and assign documentation tasks.  
+**23/09/23(Meet 7) :** The backend dynamically adapts to finalized routes based on frontend requirements.   
+**28/09/23(Meet 8) :** Updated README file & Setting up routes and APIs.  
 
 
 ## Running the website on the local device
