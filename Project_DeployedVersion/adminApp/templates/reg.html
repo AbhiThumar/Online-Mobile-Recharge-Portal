@@ -15,38 +15,40 @@
         }
     
         body {
-          font-family: Georgia, 'Times New Roman', Times, serif;
-          background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
-     
-        }
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Background%20Images%2F5.jpg?alt=media&token=74180d60-aa0e-44d1-a291-bb1927d3df02'); 
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
     
         form {
           margin: 0 auto;
-          width: 500px;
-          padding: 20px;
-          border: 2px solid white;
+          width: 400px;
+          border: 1px solid white;
           width: 450px;
-          height: 790px;
+          height: 760px;
           color: white;
           font-family: Georgia, 'Times New Roman', Times, serif;
           background-color: rgba(31, 30, 30, 0.89);
-          box-shadow: 10px 10px 50px 10px black;
+          box-shadow: 5px 5px 30px 5px black;
+          margin-right: 230px;
+          border-radius: 20px;
         }
     
         label {
           display: block;
           font-size: 16px;
-          margin-bottom: 10px;
         }
     
         input,
         select,
         textarea,
         select {
-          width: 350px;
-          padding: 10px;
+          width: 410px;
+          height: 40px;
           border: 1px solid #ccc;
-          border-radius: 3px;
+          border-radius: 10px;
           margin: 15px;
         }
     
@@ -55,7 +57,7 @@
           color: white;
           font-family: Georgia, 'Times New Roman', Times, serif;
           border: none;
-          border-radius: 50px;
+          border-radius: 10px;
           cursor: pointer;
           width: 150px;
           margin-top: 15px;
@@ -75,18 +77,33 @@
         }
         h3,option,input{
           font-family: Georgia, 'Times New Roman', Times, serif;
-          font-size: larger;
+          font-size: medium;
         }
         option,input,textarea,select{
           font-family: Georgia, 'Times New Roman', Times, serif;
-          font-size: larger;
+          font-size: medium;
           box-shadow: 2px 2px 20px 1px black;
         }
         
         h1 {
-          color: white;
+          color: black;
+          text-shadow: 1px 1px 2px white;
           font-family: Georgia, 'Times New Roman', Times, serif;
           margin-bottom: 10px;
+          margin-left: 970px;
+        }
+        p{
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 20px;
+        }
+        .Operator{
+          margin-right: 220px;
+        }
+        .gender{
+          margin-right: 310px;
+        }
+        .dob{
+          margin-right: 340px;
         }
         </style>
 
@@ -148,7 +165,9 @@
 </nav>
 <br><br>
 
-<center><h1>Sign Up</h1></center>
+<center><h1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  Sign Up</h1></center>
 
 <center>
 <form id="myForm" onsubmit="return validateForm()" action="reg" method="post">
@@ -159,13 +178,13 @@
 <br> <br>
 <span id="fullname_errorMsg" style="color: red;"></span>
 
-<label for="">DOB : - </label>
+<label  for=""><p class="dob">DOB :</p></label>
 <input type="date" id="dob" name="Date_Of_Birth" placeholder="DOB" required  > 
 <br> <br>
 <div id="dobError" class="error-message"></div>
 
 
-<h3>Gender :  
+<h3><p class="gender">Gender :</p>  
     <select name="gender" required> 
         <option value="">select</option>
         <option name="male"  value="male">Male</option>
@@ -184,7 +203,7 @@
 
 <input type="email" name="email" id="" placeholder="Enter Your Email"  required >
 
-       <h3>Select Operator :
+       <h3><p class="Operator"> Select Operator :</p>
         <select name="Mobile_Operator" required>
             <option value="">select</option>
             {% for op_name in list_data %}
@@ -194,7 +213,7 @@
       </h3>
       <br><br>
 
-<input type="submit" value="submit"><br><br>
+<input type="submit" value="Submit"><br><br>
 <label for="">Already Register? : </label>
 <a href="#"  onclick="location.href = '{% url 'reg'  %}'" >Sign In</a>
 

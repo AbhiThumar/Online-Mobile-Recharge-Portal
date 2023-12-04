@@ -10,26 +10,31 @@
     
       body {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Background%20Images%2F5.jpg?alt=media&token=74180d60-aa0e-44d1-a291-bb1927d3df02'); 
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; 
       }
   
       form {
         margin: 0 auto;
         width: 500px;
         padding: 20px;
-        border: 2px solid white;
+        border: 1px solid white;
         width: 400px;
-        height: 570px;
+        height: 420px;
         color: white;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-color: rgba(31, 30, 30, 0.801);
-        box-shadow: 10px 10px 50px 10px black;
-        margin-top: 100px;
+        background-color: rgba(31, 30, 30, 0.938);
+        box-shadow: 5px 5px 30px 8px black;
+        margin-top: 20px;
+        margin-right: 280px;
+        border-radius: 20px;
       }
   
       label {
         display: block;
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 10px;
         font-family: Georgia, 'Times New Roman', Times, serif;
       }
@@ -38,10 +43,12 @@
       select,
       textarea,
       select {
-        width: 100%;
+        width: 380px;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 3px;
+        border-radius: 10px;
+        height: 18px;
       }
   
       input[type="submit"] {
@@ -51,18 +58,29 @@
         border-radius: 5px;
         cursor: pointer;
         width: 150px;
+        height: 35px;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        
+        margin-left: 130px;
+        margin-top: 25px;
+        border-radius: 5px;
+        font-size: 15px;
       }
   
       input[type="submit"]:hover {
         background-color: black;
       }
       input{
-        box-shadow: 2px 2px 20px 4px black;
+        box-shadow: 2px 2px 10px 4px black;
       }
       #debit_card_expiry_date{
         font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      .head{
+        margin-left: 920px;
+        margin-top: 100px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 3px 3px 1px whitesmoke;
+        font-size: 35px;
       }
       </style>
     
@@ -84,13 +102,15 @@
   </ul>
 </nav>
 <br><br>
-
+<center>
+  <h1 class="head">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Payment Mode</h1>
+</center><br>
  <form action="pay" method="post">
     {% csrf_token %}
 
-    <center>
-      <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Payment Mode</h1>
-    </center><br>
+    
 
     <center>
       <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Debit Card</h1>

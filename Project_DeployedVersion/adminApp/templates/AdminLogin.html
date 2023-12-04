@@ -7,23 +7,28 @@
     <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FAdmin.css?alt=media&token=007b417d-47a9-424b-a346-c984be8a0899">
     <style>
       body {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2F8.jpg?alt=media&token=3ba03ffb-a684-49f1-b12a-1cafa09b6ad2'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
-      }
-  
-      form {
-        margin: 0 auto;
-        width: 500px;
-        padding: 20px;
-        border: 2px solid white;
-        width: 400px;
-        height: 450px;
-        color: white;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        background-color: rgba(31, 30, 30, 0.801);
-        box-shadow: 10px 10px 50px 10px black;
-        margin-top: 10px;
-      }
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Background%20Images%2F5.jpg?alt=media&token=74180d60-aa0e-44d1-a291-bb1927d3df02'); 
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; 
+        }
+    
+        form {
+          margin: 0 auto;
+          width: 500px;
+          padding: 20px;
+          border: 1px solid white;
+          width: 400px;
+          height: 600px;
+          color: white;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-color: rgba(31, 30, 30, 0.938);
+          box-shadow: 5px 5px 30px 8px black;
+          margin-top: 25px;
+          margin-right: 280px;
+          border-radius: 20px;
+        }
   
       label {
         display: block;
@@ -65,15 +70,29 @@
       }
   
       h1 {
-        color: cyan;
+        color: black;
         font-family: Georgia, 'Times New Roman', Times, serif;
         margin-bottom: 10px;
+      }
+      .head{
+        margin-left: 920px;
+        margin-top: 100px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 3px 3px 1px whitesmoke;
+        font-size: 35px;
+      }
+      img{
+        height: 380px;
+        margin-right: 0px;
       }
     </style> 
 </head>
 <body>
 {% csrf_token %}
-<center><h1>Admin Login</h1></center><br>
+
+<center><h1 class="head">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Admin Login</h1></center><br>
 
 <form action="Index" method="post" onsubmit="return validateForm()" >
     {% csrf_token %}
@@ -83,6 +102,7 @@
 
     <input type="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(.{8,12})$" title="Password must be 8-12 characters with at least one lowercase, one uppercase, and one special character" required><br>
     <input type="Submit" value="Login">
+    <img src="ok2.png" alt="">
     
 <br><br><br>
     {% if messages %}
@@ -92,6 +112,7 @@
     {% endfor %}
   </div>
 {% endif %}
+
 </form>
 
 <script>
