@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - Mobile Recharge Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333; 
+        }
+        nav {
+            background-color: #065896; /* Blue color for the navigation bar */
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center; /* Center the items horizontally */
+            align-items: center;
+            padding: 0 20px; /* Add some padding to the navigation bar */ 
+            height: 60px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fbf8f8;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .my-account {
+            font-size: 16px;
+            margin-left: auto; /* Push "My Account" to the right */
+        }
+        .brand {
+            font-size: 30px;
+            font-style: italic; /* Make "Fiber" italic */
+            width: 300px; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fffcfc;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: none; /* Remove the table border */
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            padding: 8px;
+        }
+        .symbol-cell {
+            font-size: 24px; /* Adjust the size of the symbol */
+        }
+        .upi-indicator {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="brand"><em>Fiber</em></div>
+        <a href="about_us.html" style="font-size: 22px;">About Us</a>
+        <a href="contact_us.html" style="font-size: 22px;">Contact Us</a>
+        <a href="recharge.html" style="font-size: 22px;">Recharge</a>
+        <div class="my-account" style="font-size: 22px;"><a href="my-account.html">My Account</a></div>
+    </nav>
+
+    <div class="container">
+        <h2 align="center">Transaction History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Mobile Number</th>
+                    <th>Mode of Payment</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="payment1.html"><i class="fa fa-credit-card"></i></a></td>
+                    <td>2023-11-01</td>
+                    <td>₹500</td>
+                    <td>+91 1234567890</td>
+                    <td>Credit Card <i class="fa fa-cc-mastercard"></i></td>
+                </tr>
+                <tr>
+                    <td><a href="payment2.html"><i class="fa fa-credit-card"></i></a></td>
+                    <td>2023-10-15</td>
+                    <td>₹200</td>
+                    <td>+91 9876543210</td>
+                    <td>Debit Card  <i class="fa fa-cc-amex"></i></td>
+                </tr>
+                <tr>
+                    <td><a href="payment3.html"><i class="fa fa-credit-card"></i></a></td>
+                    <td>2023-09-20</td>
+                    <td>₹300</td>
+                    <td>+91 5555555555</td>
+                    <td>PayPal <i class="fa fa-paypal"></i></td>
+                </tr>
+                <tr>
+                    <td><a href="payment4.html"><i class="fa fa-credit-card"></i></a></td>
+                    <td>2023-08-05</td>
+                    <td>₹150</td>
+                    <td>+91 8888888888</td>
+                    <td>Net Banking <i class="fa fa-google-wallet"></i></td>
+                </tr>
+                <!-- Add more transaction history rows here with the UPI indicator -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
