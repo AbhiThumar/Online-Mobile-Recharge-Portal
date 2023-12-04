@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body {
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Background%20Images%2F5.jpg?alt=media&token=74180d60-aa0e-44d1-a291-bb1927d3df02'); 
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        h1 {
+            color: rgb(0, 0, 0);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            margin-right: 50px;
+        }
+        .container{
+            border: 2px solid black;
+            height: 700px;
+        }
+        .img1{
+          margin-left: 1300px;
+          margin-top: 300px;
+        }
+    </style>
+</head>
+<body>
+{% csrf_token %}
+
+<nav id="nav">
+    <ul>
+        <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>
+        <li class="item"><a href="#About"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Recharge</a></li>
+        <li class="item"><a href="#Contact"  onclick="location.href = '{% url 'offers'  %}'" target="_blank">Offers</a></li>
+        <li class="item"><a href="#Recharge"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Transaction History</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'feedback'  %}'" target="_blank">FeedBack</a></li> 
+        <li class="item"><a href="#"  onclick="location.href = '{% url 'userprofile'  %}'" target="_blank">Profile</a></li>
+        <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'reg'  %}'" target="_blank">Logout</a></li>  
+    </ul>
+</nav>
+
+<div class="img1">
+  <center><h1> Keep the power of communication in your hands</h1></center>
+  <img src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Background%20Images%2Fok2.png?alt=media&token=7b7bb390-8bb8-4cb2-b671-901ee073e31b" alt="">
+</div>
+
+<br><br>
+
+
+  
+
+</body>
+</html>

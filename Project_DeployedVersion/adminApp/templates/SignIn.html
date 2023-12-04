@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Admin%2FAdmin_Login%2FAdmin.css?alt=media&token=007b417d-47a9-424b-a346-c984be8a0899">
+    <style>
+      body {
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Background%20Images%2F5.jpg?alt=media&token=74180d60-aa0e-44d1-a291-bb1927d3df02'); 
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; 
+        }
+    
+        form {
+          margin: 0 auto;
+          width: 500px;
+          padding: 20px;
+          border: 1px solid white;
+          width: 400px;
+          height: 600px;
+          color: white;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-color: rgba(31, 30, 30, 0.938);
+          box-shadow: 5px 5px 30px 8px black;
+          margin-right: 280px;
+          border-radius: 20px;
+        }
+  
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+  
+      input,
+      select,
+      textarea,
+      select {
+        width: 350px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+  
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 150px;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: black;
+      }
+  
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+  
+      input,
+      textarea {
+        box-shadow: 2px 2px 20px 4px black;
+      }
+  
+      h1 {
+        color: black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+      }
+      .head{
+        margin-left: 920px;
+        margin-top: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 3px 3px 1px whitesmoke;
+        font-size: 35px;
+      }
+      img{
+        height: 380px;
+        margin-right: 0px;
+      }
+    </style> 
+</head>
+<body>
+    {% csrf_token %}
+
+<nav id="nav">
+      <ul>
+          <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>  
+      </ul>
+</nav>
+<br><br>
+
+<center><h1 class="head">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  Sign In</h1></center>
+
+<center>
+<br><br><br>
+
+<form action="otp" method="post">
+{% csrf_token %}
+
+    
+<input type="email" name="email" placeholder="Email"  required ><br><br>
+
+<input type="submit" value="submit"><br><br>
+
+<label for="">New User? : </label>
+<a href="#"  onclick="location.href = '{% url 'user_reg'  %}'" >Sign Up</a>
+<img src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Background%20Images%2Fok2.png?alt=media&token=7b7bb390-8bb8-4cb2-b671-901ee073e31b" alt="">
+
+<br><br><br><br><br>
+{% if message %}
+        <h1>{{ message }}</h1>
+{% endif %}
+
+</form>
+<br><br>
+</center>
+
+</body>
+</html>

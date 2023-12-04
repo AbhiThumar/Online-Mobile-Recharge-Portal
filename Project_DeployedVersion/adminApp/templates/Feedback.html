@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>FeedBack</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fprofile.css?alt=media&token=c5ca937f-842e-45b4-9182-f108f2f4a47d">
+    <style>
+    
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/Background%20Images%2F5.jpg?alt=media&token=74180d60-aa0e-44d1-a291-bb1927d3df02'); 
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; 
+      }
+  
+      form {
+        margin: 0 auto;
+        width: 500px;
+        padding: 20px;
+        border: 1px solid white;
+        width: 400px;
+        height: 450px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgba(31, 30, 30, 0.938);
+        box-shadow: 5px 5px 30px 8px black;
+        margin-top: 170px;
+        margin-right: 280px;
+        border-radius: 20px;
+      }
+  
+      label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+  
+      input,
+      select,
+      textarea,
+      select {
+        width: 380px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        border-radius: 10px;
+        height: 18px;
+      }
+  
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 150px;
+        height: 35px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-left: 130px;
+        margin-top: 25px;
+        border-radius: 5px;
+        font-size: 15px;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: black;
+      }
+      input,textarea{
+        box-shadow: 2px 2px 10px 4px black;
+      }
+      #debit_card_expiry_date{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      .head{
+        margin-left: 920px;
+        margin-top: 100px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 3px 3px 1px whitesmoke;
+        font-size: 35px;
+      }
+      
+      </style>
+      
+    
+  
+  </head>
+  <body>
+
+    <nav id="nav">
+      <ul>
+          <li><img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mobile-recharge-a2f5b.appspot.com/o/User%2FDashBoard%2Fimage.png?alt=media&token=2270db18-877f-489b-aab9-994aa51253ac" alt=""></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'aboutus'  %}'" target="_blank">About Us</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'contactus'  %}'" target="_blank">Contact Us</a></li>
+          <li class="item"><a href="#About"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Recharge</a></li>
+          <li class="item"><a href="#Contact"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Offers</a></li>
+          <li class="item"><a href="#Recharge"  onclick="location.href = '{% url 'recharge'  %}'" target="_blank">Transaction History</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'feedback'  %}'" target="_blank">FeedBack</a></li> 
+          <li class="item"><a href="#Transaction_History"  onclick="location.href = '{% url 'userprofile'  %}'" target="_blank">Profile</a></li>
+          <li class="item"><a href="#Profie"  onclick="location.href = '{% url 'reg'  %}'" target="_blank">Logout</a></li>  
+      </ul>
+  </nav>
+  <br><br>
+
+
+
+    <form action="feedback_submit" method="post">
+      {% csrf_token %}
+
+      <center>
+        <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Feedback Form</h1>
+      </center><br><br>
+  
+  
+      <label style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;" for="">Full Name :</label>
+      <input class="frame-child" name="name" required type="text" size="{25}" /> <br><br>
+  
+      <label style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;" for="">Email :</label>
+      <input class="frame-child" name="email" type="email" required /> <br><br>
+  
+      <label style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;" for="">Feedback :</label>
+      <textarea class="rectangle-textarea" name="feedback" required> </textarea> <br><br>
+      
+      <input class="submit" type="Submit" />
+    </form>
+
+
+   
+  </body>
+</html>
